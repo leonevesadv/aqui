@@ -11,8 +11,12 @@ export interface PacotesdeViagem {
   _id: string;
   _createdDate?: Date;
   _updatedDate?: Date;
+  /** @wixFieldType date */
+  dataDeFim?: Date | string;
   /** @wixFieldType text */
   packageName?: string;
+  /** @wixFieldType date */
+  dataDeInicio?: Date | string;
   /** @wixFieldType text */
   destination?: string;
   /** @wixFieldType text */
@@ -27,8 +31,4 @@ export interface PacotesdeViagem {
   mainImage?: string;
   /** @wixFieldType text */
   shortDescription?: string;
-  /** @wixFieldType date */
-  dataDeInicio?: Date;
-  /** @wixFieldType date */
-  dataDeFim?: Date;
 }
