@@ -52,7 +52,7 @@ export default function ContactPage() {
               />
             </Link>
             <div className="hidden md:flex space-x-8">
-              <Link to="/packages" className="font-paragraph text-base hover:text-gray-600 transition-colors">
+              <Link to="/#pacotes" className="font-paragraph text-base hover:text-gray-600 transition-colors">
                 Pacotes
               </Link>
               <Link to="/about" className="font-paragraph text-base hover:text-gray-600 transition-colors">

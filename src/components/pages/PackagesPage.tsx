@@ -145,7 +145,7 @@ export default function PackagesPage() {
               />
             </Link>
             <div className="hidden md:flex space-x-8">
-              <Link to="/packages" className="font-paragraph text-base text-primary font-medium">
+              <Link to="/#pacotes" className="font-paragraph text-base text-primary font-medium">
                 Pacotes
               </Link>
               <Link to="/about" className="font-paragraph text-base hover:text-gray-600 transition-colors">

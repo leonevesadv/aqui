@@ -71,9 +71,9 @@ export default function HomePage() {
               />
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/packages" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
+              <a href="#pacotes" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
                 Pacotes
-              </Link>
+              </a>
               <Link to="/about" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
                 Sobre
               </Link>
@@ -125,7 +125,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 text-lg">
-                  <Link to="/packages">Explorar Destinos</Link>
+                  <a href="#pacotes">Explorar Destinos</a>
                 </Button>
                 <Button variant="outline" asChild size="lg" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg">
                   <Link to="/contact">Solicitar Orçamento</Link>
@@ -187,7 +187,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Packages Section */}
-      <section className="w-full py-20">
+      <section id="pacotes" className="w-full py-20">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -249,7 +249,7 @@ export default function HomePage() {
 
           <div className="text-center mt-12">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-12 py-4 text-lg">
-              <Link to="/packages">Ver Todos os Pacotes</Link>
+              <a href="#pacotes">Ver Todos os Pacotes</a>
             </Button>
           </div>
         </div>
