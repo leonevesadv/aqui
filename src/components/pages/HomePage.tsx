@@ -62,18 +62,13 @@ export default function HomePage() {
       <header className="w-full bg-white shadow-sm">
         <div className="max-w-[120rem] mx-auto px-6 py-4">
           <nav className="flex justify-between items-center">
-            <Link to="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading text-xl font-bold text-primary tracking-wide">
-                  ALLIANCE
-                </span>
-                <span className="font-paragraph text-xs text-gray-600 uppercase tracking-wider">
-                  Viagens & Turismo
-                </span>
-              </div>
+            <Link to="/" className="flex items-center">
+              <Image
+                src="https://static.wixstatic.com/media/e4152c_67816ded5533438aae26972a1ce2a94a~mv2.png"
+                alt="Alliance Viagens & Turismo"
+                className="h-12 w-auto object-contain"
+                width={200}
+              />
             </Link>
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/packages" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
@@ -376,13 +371,12 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold">A</span>
-                </div>
-                <div>
-                  <h3 className="font-heading text-xl font-bold">ALLIANCE</h3>
-                  <p className="font-paragraph text-xs opacity-75">Viagens & Turismo</p>
-                </div>
+                <Image
+                  src="https://static.wixstatic.com/media/e4152c_67816ded5533438aae26972a1ce2a94a~mv2.png"
+                  alt="Alliance Viagens & Turismo"
+                  className="h-8 w-auto object-contain brightness-0 invert"
+                  width={150}
+                />
               </div>
               <p className="font-paragraph text-sm leading-relaxed opacity-90">
                 Há mais de 20 anos realizando sonhos e criando memórias inesquecíveis. 

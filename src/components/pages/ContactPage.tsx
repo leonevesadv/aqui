@@ -43,8 +43,13 @@ export default function ContactPage() {
       <header className="w-full bg-secondary border-b border-gray-100">
         <div className="max-w-[120rem] mx-auto px-6 py-4">
           <nav className="flex justify-between items-center">
-            <Link to="/" className="font-heading text-xl font-light tracking-wide">
-              PEREGRINA
+            <Link to="/" className="flex items-center">
+              <Image
+                src="https://static.wixstatic.com/media/e4152c_67816ded5533438aae26972a1ce2a94a~mv2.png"
+                alt="Alliance Viagens & Turismo"
+                className="h-12 w-auto object-contain"
+                width={200}
+              />
             </Link>
             <div className="hidden md:flex space-x-8">
               <Link to="/packages" className="font-paragraph text-base hover:text-gray-600 transition-colors">
