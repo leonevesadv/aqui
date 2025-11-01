@@ -5,8 +5,9 @@ import { PacotesdeViagem } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { MapPin, Clock, Search, Filter } from 'lucide-react';
+import { MapPin, Clock, Search, Filter, Send, MessageCircle } from 'lucide-react';
 
 export default function PackagesPage() {
   const [packages, setPackages] = useState<PacotesdeViagem[]>([]);
@@ -15,6 +16,12 @@ export default function PackagesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [destinationFilter, setDestinationFilter] = useState('all');
   const [priceFilter, setPriceFilter] = useState('all');
+  const [contactForm, setContactForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
 
   useEffect(() => {
     const fetchPackages = async () => {
@@ -70,6 +77,27 @@ export default function PackagesPage() {
   }, [packages, searchTerm, destinationFilter, priceFilter]);
 
   const uniqueDestinations = Array.from(new Set(packages.map(pkg => pkg.destination).filter(Boolean)));
+
+  const handleContactInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setContactForm(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the form data to your backend
+    console.log('Contact form submitted:', contactForm);
+    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+    setContactForm({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
+  };
 
   if (isLoading) {
     return (
@@ -244,6 +272,119 @@ export default function PackagesPage() {
               </div>
             </>
           )}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="w-full py-20 bg-gray-50">
+        <div className="max-w-[120rem] mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Contact Info */}
+            <div className="space-y-8">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <MessageCircle className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h2 className="font-heading text-4xl font-light">
+                  Tem Dúvidas?
+                </h2>
+              </div>
+              <div className="space-y-6">
+                <p className="font-paragraph text-xl text-gray-700 leading-relaxed">
+                  Nossa equipe está pronta para ajudar você a escolher a jornada espiritual perfeita. 
+                  Entre em contato conosco para esclarecimentos ou informações personalizadas.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                      <MessageCircle className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="font-paragraph text-gray-600">Resposta em até 2 horas</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Clock className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="font-paragraph text-gray-600">Atendimento personalizado</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-secondary p-8 rounded-lg shadow-sm">
+              <h3 className="font-heading text-2xl font-light mb-6">
+                Envie sua Mensagem
+              </h3>
+              <form onSubmit={handleContactSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="contact-name" className="block font-paragraph text-sm font-medium text-gray-700 mb-2">
+                      Nome *
+                    </label>
+                    <Input
+                      type="text"
+                      id="contact-name"
+                      name="name"
+                      value={contactForm.name}
+                      onChange={handleContactInputChange}
+                      required
+                      className="font-paragraph"
+                      placeholder="Seu nome"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="contact-email" className="block font-paragraph text-sm font-medium text-gray-700 mb-2">
+                      E-mail *
+                    </label>
+                    <Input
+                      type="email"
+                      id="contact-email"
+                      name="email"
+                      value={contactForm.email}
+                      onChange={handleContactInputChange}
+                      required
+                      className="font-paragraph"
+                      placeholder="seu@email.com"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="contact-phone" className="block font-paragraph text-sm font-medium text-gray-700 mb-2">
+                    Telefone
+                  </label>
+                  <Input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    value={contactForm.phone}
+                    onChange={handleContactInputChange}
+                    className="font-paragraph"
+                    placeholder="(11) 99999-9999"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="contact-message" className="block font-paragraph text-sm font-medium text-gray-700 mb-2">
+                    Mensagem *
+                  </label>
+                  <Textarea
+                    id="contact-message"
+                    name="message"
+                    value={contactForm.message}
+                    onChange={handleContactInputChange}
+                    required
+                    rows={4}
+                    className="font-paragraph"
+                    placeholder="Conte-nos sobre suas dúvidas, interesse em algum destino específico, datas preferidas..."
+                  />
+                </div>
+                <Button type="submit" className="bg-primary text-primary-foreground hover:bg-gray-800 w-full">
+                  <Send className="w-4 h-4 mr-2" />
+                  Enviar Mensagem
+                </Button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
 
