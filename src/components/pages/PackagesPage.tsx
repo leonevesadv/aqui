@@ -240,7 +240,7 @@ export default function PackagesPage() {
                   setDestinationFilter('all');
                   setPriceFilter('all');
                 }}
-                className="bg-primary text-primary-foreground hover:bg-gray-800"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 Ver Todos os Pacotes
               </Button>
@@ -289,7 +289,7 @@ export default function PackagesPage() {
                         )}
                       </div>
                       <div className="flex justify-end">
-                        <Button asChild className="bg-primary text-primary-foreground hover:bg-gray-800">
+                        <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
                           <Link to={`/packages/${pkg._id}`}>Ver Detalhes</Link>
                         </Button>
                       </div>
@@ -405,7 +405,7 @@ export default function PackagesPage() {
                     placeholder="Conte-nos sobre suas dúvidas, interesse em algum destino específico, datas preferidas..."
                   />
                 </div>
-                <Button type="submit" className="bg-primary text-primary-foreground hover:bg-gray-800 w-full">
+                <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
                   <Send className="w-4 h-4 mr-2" />
                   Enviar Mensagem
                 </Button>

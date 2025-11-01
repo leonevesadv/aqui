@@ -23,15 +23,28 @@ export default {
                 paragraph: "cormorantgaramond-light"
             },
             colors: {
-                footerbackground: '#1a365d',
-                foreground: '#1a365d',
+                // Cores baseadas na logomarca Alliance
+                footerbackground: '#1e3a8a', // Azul escuro da Alliance
+                foreground: '#1e3a8a', // Azul escuro para textos principais
                 background: '#FFFFFF',
-                secondary: '#f7fafc',
-                'secondary-foreground': '#1a365d',
+                secondary: '#f0f9ff', // Azul muito claro para fundos secundários
+                'secondary-foreground': '#1e3a8a',
                 'primary-foreground': '#FFFFFF',
-                primary: '#2b6cb0',
-                accent: '#ed8936',
-                'accent-foreground': '#FFFFFF'
+                primary: '#2563eb', // Azul principal da Alliance
+                accent: '#f97316', // Laranja vibrante da Alliance
+                'accent-foreground': '#FFFFFF',
+                // Cores adicionais para maior flexibilidade
+                'blue-50': '#eff6ff',
+                'blue-100': '#dbeafe',
+                'blue-600': '#2563eb',
+                'blue-700': '#1d4ed8',
+                'blue-800': '#1e40af',
+                'blue-900': '#1e3a8a',
+                'orange-50': '#fff7ed',
+                'orange-100': '#ffedd5',
+                'orange-500': '#f97316',
+                'orange-600': '#ea580c',
+                'orange-700': '#c2410c'
             },
         },
     },

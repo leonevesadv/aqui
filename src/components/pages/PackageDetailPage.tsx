@@ -51,7 +51,7 @@ export default function PackageDetailPage() {
         <div className="text-center">
           <h2 className="font-heading text-3xl font-light mb-4">Pacote não encontrado</h2>
           <p className="font-paragraph text-gray-600 mb-8">{error}</p>
-          <Button asChild className="bg-primary text-primary-foreground hover:bg-gray-800">
+          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
             <Link to="/packages">Voltar aos Pacotes</Link>
           </Button>
         </div>
@@ -155,7 +155,7 @@ export default function PackageDetailPage() {
                       </p>
                     </div>
                     <div className="space-y-3">
-                      <Button className="bg-primary text-primary-foreground hover:bg-gray-800 w-full">
+                      <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
                         <Phone className="w-4 h-4 mr-2" />
                         Solicitar Orçamento
                       </Button>
@@ -253,7 +253,7 @@ export default function PackageDetailPage() {
             </p>
           </div>
           <div className="text-center">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-gray-800">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               <Link to="/packages">Ver Todos os Pacotes</Link>
             </Button>
           </div>

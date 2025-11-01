@@ -255,7 +255,7 @@ export default function AboutPage() {
             Descubra nossos destinos sagrados e permita-se viver uma experiência transformadora
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-gray-800 px-12 py-4">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4">
               <Link to="/packages">Explorar Pacotes</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-12 py-4">

@@ -176,7 +176,7 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <Button type="submit" className="bg-primary text-primary-foreground hover:bg-gray-800 w-full md:w-auto px-8 py-3">
+                <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90 w-full md:w-auto px-8 py-3">
                   <Send className="w-4 h-4 mr-2" />
                   Enviar Mensagem
                 </Button>
@@ -355,7 +355,7 @@ export default function ContactPage() {
           <p className="font-paragraph text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Nossa equipe está esperando para criar a experiência espiritual perfeita para você
           </p>
-          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-gray-800 px-12 py-4">
+          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4">
             <Link to="/packages">Ver Nossos Destinos</Link>
           </Button>
         </div>
