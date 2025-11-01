@@ -7,7 +7,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { MapPin, Clock, Search, Filter, Send, MessageCircle } from 'lucide-react';
+import { MapPin, Clock, Search, Filter, Send, MessageCircle, Calendar } from 'lucide-react';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
 export default function PackagesPage() {
   const [packages, setPackages] = useState<PacotesdeViagem[]>([]);
@@ -254,14 +256,16 @@ export default function PackagesPage() {
                           <Clock className="w-4 h-4 mr-2" />
                           <span className="font-paragraph">{pkg.duration}</span>
                         </div>
+                        {pkg.dataDeInicio && pkg.dataDeFim && (
+                          <div className="flex items-center text-sm text-gray-500">
+                            <Calendar className="w-4 h-4 mr-2" />
+                            <span className="font-paragraph">
+                              {format(new Date(pkg.dataDeInicio), 'dd/MM/yyyy', { locale: ptBR })} - {format(new Date(pkg.dataDeFim), 'dd/MM/yyyy', { locale: ptBR })}
+                            </span>
+                          </div>
+                        )}
                       </div>
-                      <div className="flex justify-between items-center">
-                        <div className="text-left">
-                          <p className="font-paragraph text-2xl font-semibold text-primary">
-                            R$ {pkg.price?.toLocaleString('pt-BR')}
-                          </p>
-                          <p className="font-paragraph text-sm text-gray-500">por pessoa</p>
-                        </div>
+                      <div className="flex justify-end">
                         <Button asChild className="bg-primary text-primary-foreground hover:bg-gray-800">
                           <Link to={`/packages/${pkg._id}`}>Ver Detalhes</Link>
                         </Button>

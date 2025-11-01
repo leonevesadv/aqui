@@ -27,4 +27,8 @@ export interface PacotesdeViagem {
   mainImage?: string;
   /** @wixFieldType text */
   shortDescription?: string;
+  /** @wixFieldType date */
+  dataDeInicio?: Date;
+  /** @wixFieldType date */
+  dataDeFim?: Date;
 }
