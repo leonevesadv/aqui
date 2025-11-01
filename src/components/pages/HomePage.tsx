@@ -85,12 +85,12 @@ export default function HomePage() {
       <section className="relative w-full h-[80vh] min-h-[600px] overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=hero-travel-bg"
-            alt="Destinos incríveis ao redor do mundo"
+            src="https://static.wixstatic.com/media/e4152c_02c111d5537e47eba9057926ee6ed743~mv2.jpg"
+            alt="Muro das Lamentações e Cúpula da Rocha em Jerusalém - Destino sagrado para turismo religioso"
             className="w-full h-full object-cover"
             width={1920}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/85 to-primary/50"></div>
         </div>
         
         <div className="relative z-10 max-w-[120rem] mx-auto px-6 h-full flex items-center">
@@ -106,8 +106,8 @@ export default function HomePage() {
                 <span className="text-accent">sonhos de viagem</span>
               </h1>
               <p className="font-paragraph text-xl leading-relaxed opacity-90 max-w-2xl">
-                Na Alliance Viagens, transformamos seus sonhos em realidade. Oferecemos experiências 
-                únicas e inesquecíveis com o melhor atendimento e os melhores preços do mercado.
+                Na Alliance Viagens, transformamos seus sonhos em realidade. Especializados em turismo religioso 
+                e experiências espirituais únicas, oferecemos jornadas inesquecíveis aos destinos mais sagrados do mundo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 text-lg">
@@ -189,7 +189,7 @@ export default function HomePage() {
               <div key={pkg._id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="relative h-64">
                   <Image
-                    src={pkg.mainImage || "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=package-default"}
+                    src={pkg.mainImage || "https://static.wixstatic.com/media/e4152c_6ffe89ea471545df882ace93c2483b8b~mv2.png?originWidth=384&originHeight=384"}
                     alt={pkg.packageName || "Pacote de viagem"}
                     className="w-full h-full object-cover"
                     width={400}
@@ -277,7 +277,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-[500px] rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=about-travel-team"
+                src="https://static.wixstatic.com/media/e4152c_5dfa2b9b9371443dac9063dc8e8c7750~mv2.png?originWidth=576&originHeight=448"
                 alt="Equipe Alliance Viagens"
                 className="w-full h-full object-cover"
                 width={600}
