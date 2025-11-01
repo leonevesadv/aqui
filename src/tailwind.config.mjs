@@ -23,13 +23,15 @@ export default {
                 paragraph: "cormorantgaramond-light"
             },
             colors: {
-                footerbackground: '#75693F',
-                foreground: '#000000',
+                footerbackground: '#1a365d',
+                foreground: '#1a365d',
                 background: '#FFFFFF',
-                secondary: '#FFFFFF',
-                'secondary-foreground': '#000000',
+                secondary: '#f7fafc',
+                'secondary-foreground': '#1a365d',
                 'primary-foreground': '#FFFFFF',
-                primary: '#000000'
+                primary: '#2b6cb0',
+                accent: '#ed8936',
+                'accent-foreground': '#FFFFFF'
             },
         },
     },

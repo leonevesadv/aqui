@@ -4,7 +4,7 @@ import { BaseCrudService } from '@/integrations';
 import { PacotesdeViagem } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
-import { MapPin, Clock, Users } from 'lucide-react';
+import { MapPin, Clock, Users, Phone, Mail, Star, Award, Shield } from 'lucide-react';
 
 export default function HomePage() {
   const [featuredPackages, setFeaturedPackages] = useState<PacotesdeViagem[]>([]);
@@ -38,100 +38,168 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-secondary">
+    <div className="min-h-screen bg-background">
       {/* Header Navigation */}
-      <header className="w-full bg-secondary border-b border-gray-100">
+      <header className="w-full bg-white shadow-sm">
         <div className="max-w-[120rem] mx-auto px-6 py-4">
           <nav className="flex justify-between items-center">
-            <Link to="/" className="font-heading text-xl font-light tracking-wide">
-              PEREGRINA
+            <Link to="/" className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">A</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-heading text-xl font-bold text-primary tracking-wide">
+                  ALLIANCE
+                </span>
+                <span className="font-paragraph text-xs text-gray-600 uppercase tracking-wider">
+                  Viagens & Turismo
+                </span>
+              </div>
             </Link>
-            <div className="hidden md:flex space-x-8">
-              <Link to="/packages" className="font-paragraph text-base hover:text-gray-600 transition-colors">
+            <div className="hidden md:flex items-center space-x-8">
+              <Link to="/packages" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
                 Pacotes
               </Link>
-              <Link to="/about" className="font-paragraph text-base hover:text-gray-600 transition-colors">
+              <Link to="/about" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
                 Sobre
               </Link>
-              <Link to="/contact" className="font-paragraph text-base hover:text-gray-600 transition-colors">
+              <Link to="/contact" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
                 Contato
               </Link>
+              <div className="flex items-center space-x-4 text-sm text-gray-600">
+                <div className="flex items-center space-x-1">
+                  <Phone className="w-4 h-4" />
+                  <span>(11) 3456-7890</span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <Mail className="w-4 h-4" />
+                  <span>contato@alliance.com.br</span>
+                </div>
+              </div>
             </div>
           </nav>
         </div>
       </header>
 
-      {/* Hero Section - Inspired by the layout structure */}
-      <section className="w-full max-w-[120rem] mx-auto px-6 py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[70vh]">
-          {/* Left Column - Typography (inspired by SPAZIO layout) */}
-          <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-4">
-              <p className="font-paragraph text-lg text-gray-600 tracking-wide uppercase">
-                Turismo Religioso Especializado
-              </p>
-              <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-light tracking-tight leading-none">
-                JORNADAS
+      {/* Hero Section */}
+      <section className="relative w-full h-[80vh] min-h-[600px] overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=hero-travel-bg"
+            alt="Destinos incríveis ao redor do mundo"
+            className="w-full h-full object-cover"
+            width={1920}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-[120rem] mx-auto px-6 h-full flex items-center">
+          <div className="max-w-3xl text-white">
+            <div className="space-y-6">
+              <div className="flex items-center space-x-2 text-accent">
+                <Star className="w-5 h-5 fill-current" />
+                <span className="font-paragraph text-lg font-medium">Mais de 20 anos de experiência</span>
+              </div>
+              <h1 className="font-heading text-5xl md:text-7xl font-bold leading-tight">
+                Realize seus
                 <br />
-                SAGRADAS
+                <span className="text-accent">sonhos de viagem</span>
               </h1>
-            </div>
-            <div className="space-y-6 max-w-2xl">
-              <p className="font-paragraph text-xl leading-relaxed text-gray-700">
-                Conecte-se com o divino através de experiências autênticas de peregrinação. 
-                Oferecemos jornadas cuidadosamente planejadas aos destinos mais sagrados do mundo.
+              <p className="font-paragraph text-xl leading-relaxed opacity-90 max-w-2xl">
+                Na Alliance Viagens, transformamos seus sonhos em realidade. Oferecemos experiências 
+                únicas e inesquecíveis com o melhor atendimento e os melhores preços do mercado.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="bg-primary text-primary-foreground hover:bg-gray-800 px-8 py-3">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 text-lg">
                   <Link to="/packages">Explorar Destinos</Link>
                 </Button>
-                <Button variant="outline" asChild className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3">
-                  <Link to="/contact">Fale Conosco</Link>
+                <Button variant="outline" asChild size="lg" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg">
+                  <Link to="/contact">Solicitar Orçamento</Link>
                 </Button>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Right Column - Featured Image */}
-          <div className="lg:col-span-5">
-            <div className="relative h-[500px] lg:h-[600px] rounded-lg overflow-hidden">
-              <Image
-                src="https://static.wixstatic.com/media/e4152c_f6ddb97c4a0a47169f7dee5c56a5fe9f~mv2.png?originWidth=576&originHeight=576"
-                alt="Peregrinos em jornada espiritual"
-                className="w-full h-full object-cover"
-                width={600}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+      {/* Why Choose Us Section */}
+      <section className="w-full py-20 bg-secondary">
+        <div className="max-w-[120rem] mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Por que escolher a Alliance?
+            </h2>
+            <p className="font-paragraph text-xl text-gray-600 max-w-3xl mx-auto">
+              Somos especialistas em criar experiências de viagem únicas e memoráveis
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-heading text-2xl font-semibold text-foreground">
+                Experiência Comprovada
+              </h3>
+              <p className="font-paragraph text-gray-600">
+                Mais de 20 anos no mercado, com milhares de clientes satisfeitos e destinos únicos.
+              </p>
+            </div>
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-heading text-2xl font-semibold text-foreground">
+                Segurança Total
+              </h3>
+              <p className="font-paragraph text-gray-600">
+                Viaje com tranquilidade. Oferecemos seguro viagem e suporte 24h durante toda a jornada.
+              </p>
+            </div>
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
+                <Star className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-heading text-2xl font-semibold text-foreground">
+                Atendimento Premium
+              </h3>
+              <p className="font-paragraph text-gray-600">
+                Equipe especializada para criar roteiros personalizados e únicos para você.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Packages Section */}
-      <section className="w-full bg-gray-50 py-20">
+      <section className="w-full py-20">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl font-light mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
               Destinos em Destaque
             </h2>
             <p className="font-paragraph text-xl text-gray-600 max-w-3xl mx-auto">
-              Descubra nossos pacotes mais procurados para experiências espirituais transformadoras
+              Descubra nossos pacotes mais procurados e embarque na viagem dos seus sonhos
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredPackages.map((pkg) => (
-              <div key={pkg._id} className="bg-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div key={pkg._id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="relative h-64">
                   <Image
-                    src={pkg.mainImage || "https://static.wixstatic.com/media/e4152c_a161e35ff4104725ae4180c76e17a116~mv2.png?originWidth=384&originHeight=256"}
+                    src={pkg.mainImage || "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=package-default"}
                     alt={pkg.packageName || "Pacote de viagem"}
                     className="w-full h-full object-cover"
                     width={400}
                   />
+                  <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Oferta Especial
+                  </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading text-2xl font-light mb-3">
+                  <h3 className="font-heading text-2xl font-semibold text-foreground mb-3">
                     {pkg.packageName}
                   </h3>
                   <p className="font-paragraph text-gray-600 mb-4 line-clamp-2">
@@ -139,22 +207,22 @@ export default function HomePage() {
                   </p>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center text-sm text-gray-500">
-                      <MapPin className="w-4 h-4 mr-2" />
+                      <MapPin className="w-4 h-4 mr-2 text-primary" />
                       <span className="font-paragraph">{pkg.destination}</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-500">
-                      <Clock className="w-4 h-4 mr-2" />
+                      <Clock className="w-4 h-4 mr-2 text-primary" />
                       <span className="font-paragraph">{pkg.duration}</span>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <div className="text-right">
-                      <p className="font-paragraph text-2xl font-semibold text-primary">
+                    <div>
+                      <p className="font-paragraph text-2xl font-bold text-accent">
                         R$ {pkg.price?.toLocaleString('pt-BR')}
                       </p>
                       <p className="font-paragraph text-sm text-gray-500">por pessoa</p>
                     </div>
-                    <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                    <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
                       <Link to={`/packages/${pkg._id}`}>Ver Detalhes</Link>
                     </Button>
                   </div>
@@ -164,7 +232,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-gray-800 px-12 py-4">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-12 py-4 text-lg">
               <Link to="/packages">Ver Todos os Pacotes</Link>
             </Button>
           </div>
@@ -172,38 +240,45 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="w-full py-20">
+      <section className="w-full py-20 bg-secondary">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="font-heading text-4xl md:text-5xl font-light">
-                Sua Jornada Espiritual Começa Aqui
+              <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground">
+                Sua próxima aventura começa aqui
               </h2>
               <div className="space-y-6">
                 <p className="font-paragraph text-lg leading-relaxed text-gray-700">
-                  Com mais de 15 anos de experiência em turismo religioso, a Peregrina é especializada 
-                  em criar experiências autênticas e transformadoras para peregrinos de todas as idades.
+                  A Alliance Viagens é uma empresa consolidada no mercado de turismo, com mais de 20 anos 
+                  de experiência em proporcionar viagens inesquecíveis para nossos clientes.
                 </p>
                 <p className="font-paragraph text-lg leading-relaxed text-gray-700">
-                  Nossos roteiros são cuidadosamente planejados para proporcionar momentos de reflexão, 
-                  oração e conexão espiritual nos destinos mais sagrados do mundo.
+                  Oferecemos roteiros personalizados, atendimento especializado e os melhores preços 
+                  do mercado. Nossa missão é transformar seus sonhos de viagem em realidade.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="font-heading text-3xl font-light text-primary mb-2">500+</div>
-                  <p className="font-paragraph text-gray-600">Peregrinos Atendidos</p>
+                  <div className="font-heading text-3xl font-bold text-primary mb-2">5000+</div>
+                  <p className="font-paragraph text-gray-600">Clientes Satisfeitos</p>
                 </div>
                 <div className="text-center">
-                  <div className="font-heading text-3xl font-light text-primary mb-2">25+</div>
-                  <p className="font-paragraph text-gray-600">Destinos Sagrados</p>
+                  <div className="font-heading text-3xl font-bold text-primary mb-2">50+</div>
+                  <p className="font-paragraph text-gray-600">Destinos Únicos</p>
+                </div>
+                <div className="text-center">
+                  <div className="font-heading text-3xl font-bold text-primary mb-2">20+</div>
+                  <p className="font-paragraph text-gray-600">Anos de Experiência</p>
                 </div>
               </div>
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                <Link to="/about">Conheça Nossa História</Link>
+              </Button>
             </div>
-            <div className="relative h-[500px] rounded-lg overflow-hidden">
+            <div className="relative h-[500px] rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="https://static.wixstatic.com/media/e4152c_a9864fa639d947e38114cc9393256a8a~mv2.png?originWidth=576&originHeight=448"
-                alt="Grupo de peregrinos em oração"
+                src="https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=about-travel-team"
+                alt="Equipe Alliance Viagens"
                 className="w-full h-full object-cover"
                 width={600}
               />
@@ -212,46 +287,87 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="w-full py-20 bg-primary">
+        <div className="max-w-[120rem] mx-auto px-6 text-center">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white">
+              Pronto para sua próxima aventura?
+            </h2>
+            <p className="font-paragraph text-xl text-white/90 leading-relaxed">
+              Entre em contato conosco e descubra como podemos tornar sua viagem dos sonhos uma realidade. 
+              Nossa equipe especializada está pronta para criar o roteiro perfeito para você.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 text-lg">
+                <Link to="/contact">Solicitar Orçamento</Link>
+              </Button>
+              <Button variant="outline" asChild size="lg" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg">
+                <Link to="/packages">Ver Pacotes</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="w-full bg-footerbackground text-primary-foreground py-16">
+      <footer className="w-full bg-footerbackground text-white py-16">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <h3 className="font-heading text-2xl font-light">PEREGRINA</h3>
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold">A</span>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold">ALLIANCE</h3>
+                  <p className="font-paragraph text-xs opacity-75">Viagens & Turismo</p>
+                </div>
+              </div>
               <p className="font-paragraph text-sm leading-relaxed opacity-90">
-                Especializados em turismo religioso, oferecemos jornadas espirituais 
-                autênticas aos destinos mais sagrados do mundo.
+                Há mais de 20 anos realizando sonhos e criando memórias inesquecíveis. 
+                Sua próxima aventura começa aqui.
               </p>
             </div>
             <div className="space-y-4">
-              <h4 className="font-heading text-lg font-light">Destinos</h4>
+              <h4 className="font-heading text-lg font-semibold">Destinos Populares</h4>
               <ul className="space-y-2 font-paragraph text-sm">
-                <li><Link to="/packages" className="hover:opacity-75 transition-opacity">Terra Santa</Link></li>
-                <li><Link to="/packages" className="hover:opacity-75 transition-opacity">Roma e Vaticano</Link></li>
-                <li><Link to="/packages" className="hover:opacity-75 transition-opacity">Santiago de Compostela</Link></li>
-                <li><Link to="/packages" className="hover:opacity-75 transition-opacity">Fátima</Link></li>
+                <li><Link to="/packages" className="hover:text-accent transition-colors">Europa</Link></li>
+                <li><Link to="/packages" className="hover:text-accent transition-colors">Estados Unidos</Link></li>
+                <li><Link to="/packages" className="hover:text-accent transition-colors">Ásia</Link></li>
+                <li><Link to="/packages" className="hover:text-accent transition-colors">América do Sul</Link></li>
               </ul>
             </div>
             <div className="space-y-4">
-              <h4 className="font-heading text-lg font-light">Empresa</h4>
+              <h4 className="font-heading text-lg font-semibold">Empresa</h4>
               <ul className="space-y-2 font-paragraph text-sm">
-                <li><Link to="/about" className="hover:opacity-75 transition-opacity">Sobre Nós</Link></li>
-                <li><Link to="/contact" className="hover:opacity-75 transition-opacity">Contato</Link></li>
-                <li><Link to="/packages" className="hover:opacity-75 transition-opacity">Todos os Pacotes</Link></li>
+                <li><Link to="/about" className="hover:text-accent transition-colors">Sobre Nós</Link></li>
+                <li><Link to="/contact" className="hover:text-accent transition-colors">Contato</Link></li>
+                <li><Link to="/packages" className="hover:text-accent transition-colors">Todos os Pacotes</Link></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Política de Privacidade</a></li>
               </ul>
             </div>
             <div className="space-y-4">
-              <h4 className="font-heading text-lg font-light">Contato</h4>
-              <div className="space-y-2 font-paragraph text-sm">
-                <p>+55 (11) 3456-7890</p>
-                <p>contato@peregrina.com.br</p>
-                <p>São Paulo, SP</p>
+              <h4 className="font-heading text-lg font-semibold">Contato</h4>
+              <div className="space-y-3 font-paragraph text-sm">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4 text-accent" />
+                  <span>(11) 3456-7890</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4 text-accent" />
+                  <span>contato@alliance.com.br</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4 text-accent" />
+                  <span>São Paulo, SP</span>
+                </div>
               </div>
             </div>
           </div>
-          <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center">
+          <div className="border-t border-white/20 mt-12 pt-8 text-center">
             <p className="font-paragraph text-sm opacity-75">
-              © 2024 Peregrina Turismo Religioso. Todos os direitos reservados.
+              © 2024 Alliance Viagens & Turismo. Todos os direitos reservados.
             </p>
           </div>
         </div>
