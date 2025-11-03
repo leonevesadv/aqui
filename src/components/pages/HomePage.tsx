@@ -123,6 +123,18 @@ export default function HomePage() {
                 Na Alliance Viagens, transformamos seus sonhos em realidade. Especializados em turismo religioso 
                 e experiências espirituais únicas, oferecemos jornadas inesquecíveis aos destinos mais sagrados do mundo.
               </p>
+              
+              {/* Destacar diferenciais */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <Users className="w-5 h-5 text-accent" />
+                  <span className="font-paragraph text-base font-medium">Viagens em grupos fechados</span>
+                </div>
+                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <Award className="w-5 h-5 text-accent" />
+                  <span className="font-paragraph text-base font-medium">Viagens com diretor espiritual</span>
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 text-lg">
                   <a href="#pacotes">Explorar Destinos</a>
@@ -144,7 +156,7 @@ export default function HomePage() {
               Por que escolher a Alliance?
             </h2>
             <p className="font-paragraph text-xl text-gray-600 max-w-3xl mx-auto">
-              Somos especialistas em criar experiências de viagem únicas e memoráveis
+              Somos especialistas em criar experiências de viagem únicas e memoráveis, com grupos fechados e acompanhamento espiritual
             </p>
           </div>
           
@@ -162,24 +174,24 @@ export default function HomePage() {
             </div>
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto">
-                <Shield className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-heading text-2xl font-semibold text-foreground">
-                Segurança Total
+                Grupos Fechados
               </h3>
               <p className="font-paragraph text-gray-600">
-                Viaje com tranquilidade. Oferecemos seguro viagem e suporte 24h durante toda a jornada.
+                Viagens exclusivas em grupos fechados para uma experiência mais íntima e personalizada.
               </p>
             </div>
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
-                <Star className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-heading text-2xl font-semibold text-foreground">
-                Atendimento Premium
+                Diretor Espiritual
               </h3>
               <p className="font-paragraph text-gray-600">
-                Equipe especializada para criar roteiros personalizados e únicos para você.
+                Acompanhamento de diretor espiritual especializado para enriquecer sua jornada de fé.
               </p>
             </div>
           </div>
