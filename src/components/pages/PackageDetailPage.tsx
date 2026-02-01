@@ -63,6 +63,23 @@ export default function PackageDetailPage() {
   const inclusions = packageData.inclusions?.split('\n').filter(item => item.trim()) || [];
   const itineraryItems = packageData.itinerary?.split('\n').filter(item => item.trim()) || [];
 
+  // Group itinerary items by day
+  const groupedItinerary = itineraryItems.reduce((acc, item) => {
+    const isDayHeader = item.trim().match(/^\\d+º\\s+DIA/i);
+    
+    if (isDayHeader) {
+      acc.push({
+        type: 'day',
+        dayHeader: item.trim(),
+        activities: []
+      });
+    } else if (acc.length > 0 && acc[acc.length - 1].type === 'day') {
+      acc[acc.length - 1].activities.push(item.trim());
+    }
+    
+    return acc;
+  }, [] as any[]);
+
   return (
     <div className="min-h-screen bg-secondary">
       {/* Header Navigation */}
@@ -228,29 +245,35 @@ export default function PackageDetailPage() {
             <TabsContent value="itinerary" className="space-y-8">
               <div className="space-y-8">
                 <h2 className="font-heading font-light text-xl">Roteiro Detalhado</h2>
-                {itineraryItems.length > 0 ? (
-                  <div className="space-y-6">
-                    {itineraryItems.map((item, index) => {
-                      const isDayHeader = item.trim().match(/^\d+º\s+DIA/i);
-                      return (
-                        <div key={index}>
-                          {isDayHeader ? (
-                            <div className="flex items-center gap-4 py-4 px-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border-l-4 border-primary shadow-sm">
-                              <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full flex-shrink-0">
-                                <Calendar className="w-5 h-5 text-white" />
-                              </div>
-                              <h3 className="font-heading text-lg font-light text-primary">
-                                {item.trim()}
-                              </h3>
-                            </div>
-                          ) : (
-                            <p className="font-paragraph text-gray-700 leading-relaxed text-base pl-14">
-                              {item.trim()}
-                            </p>
-                          )}
+                {groupedItinerary.length > 0 ? (
+                  <div className="space-y-8">
+                    {groupedItinerary.map((daySection, dayIndex) => (
+                      <div key={dayIndex} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        {/* Day Header */}
+                        <div className="flex items-center gap-4 py-5 px-6 bg-gradient-to-r from-blue-50 to-blue-100 border-b border-gray-200">
+                          <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full flex-shrink-0">
+                            <Calendar className="w-6 h-6 text-white" />
+                          </div>
+                          <h3 className="font-heading text-lg font-light text-primary">
+                            {daySection.dayHeader}
+                          </h3>
                         </div>
-                      );
-                    })}
+                        
+                        {/* Day Activities */}
+                        {daySection.activities.length > 0 && (
+                          <div className="p-6 space-y-4">
+                            {daySection.activities.map((activity, actIndex) => (
+                              <div key={actIndex} className="flex gap-4">
+                                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-primary mt-2"></div>
+                                <p className="font-paragraph text-gray-700 leading-relaxed text-base">
+                                  {activity}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 ) : (
                   <p className="font-paragraph text-gray-600">
