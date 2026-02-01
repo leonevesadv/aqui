@@ -144,15 +144,15 @@ export default function PackageDetailPage() {
                     </div>
                   </div>
                   {(packageData.dataDeInicio || packageData.dataDeFim) && (
-                    <div className="space-y-4">
+                    <div className="space-y-3 py-4 px-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
                       {packageData.dataDeInicio && (
-                        <div className="flex items-center gap-4 py-4 px-5 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border-l-4 border-primary shadow-sm">
-                          <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full flex-shrink-0">
-                            <Calendar className="w-5 h-5 text-white" />
+                        <div className="flex items-center gap-3">
+                          <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-full flex-shrink-0">
+                            <Calendar className="w-4 h-4 text-white" />
                           </div>
                           <div>
-                            <p className="font-paragraph text-xs text-gray-500 uppercase tracking-wide font-semibold">Data de Início</p>
-                            <p className="font-paragraph font-medium text-lg text-primary">
+                            <p className="font-paragraph text-xs text-gray-500 uppercase tracking-wide">Início</p>
+                            <p className="font-paragraph font-medium text-base text-primary">
                               {new Date(packageData.dataDeInicio).toLocaleDateString('pt-BR', { 
                                 year: 'numeric', 
                                 month: 'long', 
@@ -163,13 +163,13 @@ export default function PackageDetailPage() {
                         </div>
                       )}
                       {packageData.dataDeFim && (
-                        <div className="flex items-center gap-4 py-4 px-5 bg-gradient-to-r from-orange-50 to-orange-100 rounded-lg border-l-4 border-accent shadow-sm">
-                          <div className="flex items-center justify-center w-10 h-10 bg-accent rounded-full flex-shrink-0">
-                            <CalendarDays className="w-5 h-5 text-white" />
+                        <div className="flex items-center gap-3">
+                          <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-full flex-shrink-0">
+                            <Calendar className="w-4 h-4 text-white" />
                           </div>
                           <div>
-                            <p className="font-paragraph text-xs text-gray-500 uppercase tracking-wide font-semibold">Data de Término</p>
-                            <p className="font-paragraph font-medium text-lg text-accent">
+                            <p className="font-paragraph text-xs text-gray-500 uppercase tracking-wide">Término</p>
+                            <p className="font-paragraph font-medium text-base text-primary">
                               {new Date(packageData.dataDeFim).toLocaleDateString('pt-BR', { 
                                 year: 'numeric', 
                                 month: 'long', 
