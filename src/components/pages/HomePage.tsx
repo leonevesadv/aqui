@@ -136,7 +136,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 text-lg">
-                  <a href="#pacotes">Explorar Destinos</a>
+                  <a href="#pacotes" className="bg-[#fdad06ff]">Explorar Destinos</a>
                 </Button>
                 <Button variant="outline" asChild size="lg" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg">
                   <Link to="/contact">Solicitar Orçamento</Link>
@@ -171,7 +171,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto bg-[#fdad06ff]">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-heading text-2xl font-semibold text-foreground">
