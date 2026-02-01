@@ -27,7 +27,7 @@ export interface PacotesdeViagem {
   itinerary?: string;
   /** @wixFieldType text */
   inclusions?: string;
-  /** @wixFieldType image */
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
   mainImage?: string;
   /** @wixFieldType text */
   shortDescription?: string;
