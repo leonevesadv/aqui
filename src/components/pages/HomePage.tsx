@@ -130,7 +130,7 @@ export default function HomePage() {
                   <span className="font-paragraph text-base font-medium">Viagens em grupos fechados</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <Award className="w-5 h-5 text-accent" />
+                  <Award className="w-5 h-5 text-accent fill-[transparent]" />
                   <span className="font-paragraph text-base font-medium">Viagens com diretor espiritual</span>
                 </div>
               </div>
