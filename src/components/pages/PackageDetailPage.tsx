@@ -180,17 +180,23 @@ export default function PackageDetailPage() {
             <div className="space-y-8">
               <h2 className="font-heading text-3xl font-light">Roteiro</h2>
               {itineraryItems.length > 0 ? (
-                <div className="space-y-4">
-                  {itineraryItems.map((item, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-paragraph text-sm font-medium">
-                        {index + 1}
+                <div className="space-y-6">
+                  {itineraryItems.map((item, index) => {
+                    const isDayHeader = item.trim().match(/^\d+º\s+DIA/i);
+                    return (
+                      <div key={index}>
+                        {isDayHeader ? (
+                          <h3 className="font-heading text-lg font-light text-primary mb-2">
+                            {item.trim()}
+                          </h3>
+                        ) : (
+                          <p className="font-paragraph text-gray-700 leading-relaxed text-sm">
+                            {item.trim()}
+                          </p>
+                        )}
                       </div>
-                      <p className="font-paragraph text-gray-700 leading-relaxed pt-1">
-                        {item.trim()}
-                      </p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               ) : (
                 <p className="font-paragraph text-gray-600">
