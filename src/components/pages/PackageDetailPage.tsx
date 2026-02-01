@@ -5,7 +5,7 @@ import { PacotesdeViagem } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { MapPin, Clock, Users, Check, ArrowLeft, Phone, Mail } from 'lucide-react';
+import { MapPin, Clock, Users, Check, ArrowLeft, Phone, Mail, Calendar } from 'lucide-react';
 
 export default function PackageDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -191,17 +191,20 @@ export default function PackageDetailPage() {
               <div className="space-y-8">
                 <h2 className="font-heading font-light text-xl">Roteiro Detalhado</h2>
                 {itineraryItems.length > 0 ? (
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     {itineraryItems.map((item, index) => {
                       const isDayHeader = item.trim().match(/^\d+º\s+DIA/i);
                       return (
                         <div key={index}>
                           {isDayHeader ? (
-                            <h3 className="font-heading text-lg font-light text-primary mb-2">
-                              {item.trim()}
-                            </h3>
+                            <div className="flex items-center gap-3 py-3 px-4 bg-blue-50 rounded-lg border-l-4 border-primary">
+                              <Calendar className="w-5 h-5 text-primary flex-shrink-0" />
+                              <h3 className="font-heading text-lg font-light text-primary">
+                                {item.trim()}
+                              </h3>
+                            </div>
                           ) : (
-                            <p className="font-paragraph text-gray-700 leading-relaxed text-sm">
+                            <p className="font-paragraph text-gray-700 leading-relaxed text-sm pl-8">
                               {item.trim()}
                             </p>
                           )}
