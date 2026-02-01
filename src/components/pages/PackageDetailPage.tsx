@@ -144,9 +144,9 @@ export default function PackageDetailPage() {
                     </div>
                   </div>
                   {(packageData.dataDeInicio || packageData.dataDeFim) && (
-                    <div className="space-y-3 py-4 px-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
+                    <div className="space-y-4 py-4 px-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
                       {packageData.dataDeInicio && (
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 pb-4 border-b border-blue-200">
                           <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-full flex-shrink-0">
                             <Calendar className="w-4 h-4 text-white" />
                           </div>
@@ -163,7 +163,7 @@ export default function PackageDetailPage() {
                         </div>
                       )}
                       {packageData.dataDeFim && (
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 pt-2">
                           <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-full flex-shrink-0">
                             <Calendar className="w-4 h-4 text-white" />
                           </div>
