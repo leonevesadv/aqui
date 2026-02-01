@@ -90,7 +90,6 @@ export default function PackageDetailPage() {
           </nav>
         </div>
       </header>
-
       {/* Back Button */}
       <section className="w-full py-6 bg-gray-50">
         <div className="max-w-[120rem] mx-auto px-6">
@@ -102,7 +101,6 @@ export default function PackageDetailPage() {
           </Button>
         </div>
       </section>
-
       {/* Package Hero */}
       <section className="w-full">
         <div className="max-w-[120rem] mx-auto">
@@ -171,14 +169,13 @@ export default function PackageDetailPage() {
           </div>
         </div>
       </section>
-
       {/* Package Details */}
       <section className="w-full py-16">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Itinerary */}
             <div className="space-y-8">
-              <h2 className="font-heading text-3xl font-light">Roteiro</h2>
+              <h2 className="font-heading text-3xl font-light">Roteiro   1º DIA - 27/03/2026 – FORTALEZA | GUARULHOS | CAMPOS DO JORDÃOEncontro no aeroporto, conforme horário previamente indicado, para embarque com destino a Guarulhos. Chegada e continuação da viagem para Campos do Jordão. City tour guiado pelos principais pontos turísticos. Check-in, jantar incluído e noite livre.​2º DIA - 28/03/2026 – CAMPOS DO JORDÃO | APARECIDACafé da manhã no hotel. Manhã livre, com opção de passeio de trenzinho. Visita incluída a uma loja de vinhos e chocolates para degustação. Tempo livre para almoço (não incluso). À tarde, viagem com destino a Aparecida. Check-in, hospedagem e jantar.3º DIA - 29/03/2026– APARECIDA | CANÇÃO NOVA (DOMINGO DE RAMOS)Após o café da manhã, saída para Guaratinguetá, onde visitaremos a Casa e o Museu de Frei Galvão. Em seguida, continuação até a Canção Nova, com participação na Santa Missa no Santuário do Pai das Misericórdias. Tempo livre para possível participação na palestra do Frei Gilson (a confirmar). Retorno a Aparecida, hospedagem e jantar incluído.4º DIA - 30/03/2026– APARECIDA ( VISITAS DEVOCIONAIS )Café da manhã. Visita guiada às Basílicas e a todo o complexo do Santuário Nacional. Tempo livre para passeios opcionais, como a subida ao Mirante da Torre ou o passeio de bondinho até o Morro do Cruzeiro. À tarde, faremos o Caminho do Rosário. Jantar e hospedagem.5º Dia - 31/03/2026 – APARECIDA | FORTALEZACafé da manhã. No horário a ser informado, check-out no hotel e traslado ao aeroporto de Guarulhos para embarque de retorno a Fortaleza.</h2>
               {itineraryItems.length > 0 ? (
                 <div className="space-y-6">
                   {itineraryItems.map((item, index) => {
@@ -246,7 +243,6 @@ export default function PackageDetailPage() {
           </div>
         </div>
       </section>
-
       {/* Related Packages */}
       <section className="w-full bg-gray-50 py-16">
         <div className="max-w-[120rem] mx-auto px-6">
@@ -265,7 +261,6 @@ export default function PackageDetailPage() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="w-full bg-footerbackground text-primary-foreground py-16">
         <div className="max-w-[120rem] mx-auto px-6">
