@@ -186,7 +186,7 @@ export default function HomePage() {
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
                 <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2v20M4 12h16" />
+                  <path d="M12 2v20M4 8h16" />
                 </svg>
               </div>
               <h3 className="font-heading text-2xl font-semibold text-foreground">
