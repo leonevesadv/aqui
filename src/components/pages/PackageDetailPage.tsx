@@ -4,6 +4,7 @@ import { BaseCrudService } from '@/integrations';
 import { PacotesdeViagem } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MapPin, Clock, Users, Check, ArrowLeft, Phone, Mail } from 'lucide-react';
 
 export default function PackageDetailPage() {
@@ -169,78 +170,114 @@ export default function PackageDetailPage() {
           </div>
         </div>
       </section>
-      {/* Package Details */}
+      {/* Package Details with Tabs */}
       <section className="w-full py-16">
         <div className="max-w-[120rem] mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Itinerary */}
-            <div className="space-y-8">
-              <h2 className="font-heading text-3xl font-light">Roteiro   1º DIA - 27/03/2026 – FORTALEZA | GUARULHOS | CAMPOS DO JORDÃOEncontro no aeroporto, conforme horário previamente indicado, para embarque com destino a Guarulhos. Chegada e continuação da viagem para Campos do Jordão. City tour guiado pelos principais pontos turísticos. Check-in, jantar incluído e noite livre.​2º DIA - 28/03/2026 – CAMPOS DO JORDÃO | APARECIDACafé da manhã no hotel. Manhã livre, com opção de passeio de trenzinho. Visita incluída a uma loja de vinhos e chocolates para degustação. Tempo livre para almoço (não incluso). À tarde, viagem com destino a Aparecida. Check-in, hospedagem e jantar.3º DIA - 29/03/2026– APARECIDA | CANÇÃO NOVA (DOMINGO DE RAMOS)Após o café da manhã, saída para Guaratinguetá, onde visitaremos a Casa e o Museu de Frei Galvão. Em seguida, continuação até a Canção Nova, com participação na Santa Missa no Santuário do Pai das Misericórdias. Tempo livre para possível participação na palestra do Frei Gilson (a confirmar). Retorno a Aparecida, hospedagem e jantar incluído.4º DIA - 30/03/2026– APARECIDA ( VISITAS DEVOCIONAIS )Café da manhã. Visita guiada às Basílicas e a todo o complexo do Santuário Nacional. Tempo livre para passeios opcionais, como a subida ao Mirante da Torre ou o passeio de bondinho até o Morro do Cruzeiro. À tarde, faremos o Caminho do Rosário. Jantar e hospedagem.5º Dia - 31/03/2026 – APARECIDA | FORTALEZACafé da manhã. No horário a ser informado, check-out no hotel e traslado ao aeroporto de Guarulhos para embarque de retorno a Fortaleza.</h2>
-              {itineraryItems.length > 0 ? (
-                <div className="space-y-6">
-                  {itineraryItems.map((item, index) => {
-                    const isDayHeader = item.trim().match(/^\d+º\s+DIA/i);
-                    return (
-                      <div key={index}>
-                        {isDayHeader ? (
-                          <h3 className="font-heading text-lg font-light text-primary mb-2">
-                            {item.trim()}
-                          </h3>
-                        ) : (
-                          <p className="font-paragraph text-gray-700 leading-relaxed text-sm">
-                            {item.trim()}
-                          </p>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              ) : (
-                <p className="font-paragraph text-gray-600">
-                  {packageData.itinerary || 'Roteiro detalhado será fornecido mediante solicitação.'}
-                </p>
-              )}
-            </div>
+          <Tabs defaultValue="itinerary" className="w-full">
+            <TabsList className="grid w-full max-w-md grid-cols-3 mb-12">
+              <TabsTrigger value="itinerary" className="font-paragraph text-base">
+                Roteiro
+              </TabsTrigger>
+              <TabsTrigger value="inclusions" className="font-paragraph text-base">
+                Inclusões
+              </TabsTrigger>
+              <TabsTrigger value="contact" className="font-paragraph text-base">
+                Contato
+              </TabsTrigger>
+            </TabsList>
 
-            {/* Inclusions */}
-            <div className="space-y-8">
-              <h2 className="font-heading text-3xl font-light">O que está incluído</h2>
-              {inclusions.length > 0 ? (
-                <div className="space-y-3">
-                  {inclusions.map((inclusion, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <p className="font-paragraph text-gray-700">
-                        {inclusion.trim()}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <p className="font-paragraph text-gray-600">
-                  {packageData.inclusions || 'Lista de inclusões será fornecida mediante solicitação.'}
-                </p>
-              )}
-
-              {/* Contact Info */}
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-heading text-xl font-light mb-4">Interessado neste pacote?</h3>
-                <p className="font-paragraph text-gray-600 mb-4">
-                  Entre em contato conosco para mais informações e personalizações.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-center text-gray-600">
-                    <Phone className="w-4 h-4 mr-2" />
-                    <span className="font-paragraph">+55 (11) 3456-7890</span>
+            {/* Itinerary Tab */}
+            <TabsContent value="itinerary" className="space-y-8">
+              <div className="space-y-8">
+                <h2 className="font-heading text-3xl font-light">Roteiro Detalhado</h2>
+                {itineraryItems.length > 0 ? (
+                  <div className="space-y-6">
+                    {itineraryItems.map((item, index) => {
+                      const isDayHeader = item.trim().match(/^\d+º\s+DIA/i);
+                      return (
+                        <div key={index}>
+                          {isDayHeader ? (
+                            <h3 className="font-heading text-lg font-light text-primary mb-2">
+                              {item.trim()}
+                            </h3>
+                          ) : (
+                            <p className="font-paragraph text-gray-700 leading-relaxed text-sm">
+                              {item.trim()}
+                            </p>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <Mail className="w-4 h-4 mr-2" />
-                    <span className="font-paragraph">contato@peregrina.com.br</span>
+                ) : (
+                  <p className="font-paragraph text-gray-600">
+                    {packageData.itinerary || 'Roteiro detalhado será fornecido mediante solicitação.'}
+                  </p>
+                )}
+              </div>
+            </TabsContent>
+
+            {/* Inclusions Tab */}
+            <TabsContent value="inclusions" className="space-y-8">
+              <div className="space-y-8">
+                <h2 className="font-heading text-3xl font-light">O que está incluído</h2>
+                {inclusions.length > 0 ? (
+                  <div className="space-y-3">
+                    {inclusions.map((inclusion, index) => (
+                      <div key={index} className="flex items-start space-x-3">
+                        <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <p className="font-paragraph text-gray-700">
+                          {inclusion.trim()}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="font-paragraph text-gray-600">
+                    {packageData.inclusions || 'Lista de inclusões será fornecida mediante solicitação.'}
+                  </p>
+                )}
+              </div>
+            </TabsContent>
+
+            {/* Contact Tab */}
+            <TabsContent value="contact" className="space-y-8">
+              <div className="space-y-8">
+                <h2 className="font-heading text-3xl font-light">Interessado neste pacote?</h2>
+                <div className="bg-gray-50 p-8 rounded-lg max-w-2xl">
+                  <p className="font-paragraph text-gray-600 mb-6">
+                    Entre em contato conosco para mais informações, personalizações e disponibilidade de datas.
+                  </p>
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center text-gray-700">
+                      <Phone className="w-5 h-5 mr-3 text-primary" />
+                      <div>
+                        <p className="font-paragraph text-sm text-gray-500">Telefone</p>
+                        <p className="font-paragraph font-medium">+55 (11) 3456-7890</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center text-gray-700">
+                      <Mail className="w-5 h-5 mr-3 text-primary" />
+                      <div>
+                        <p className="font-paragraph text-sm text-gray-500">E-mail</p>
+                        <p className="font-paragraph font-medium">contato@peregrina.com.br</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Solicitar Orçamento
+                    </Button>
+                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full">
+                      <Mail className="w-4 h-4 mr-2" />
+                      Enviar Mensagem
+                    </Button>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
       {/* Related Packages */}
