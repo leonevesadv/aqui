@@ -4,7 +4,7 @@ import { BaseCrudService } from '@/integrations';
 import { PacotesdeViagem } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
-import { MapPin, Clock, Users, Phone, Mail, Star, Award, Shield, Calendar } from 'lucide-react';
+import { MapPin, Clock, Users, Phone, Mail, Star, Award, Shield, Calendar, Plus } from 'lucide-react';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
