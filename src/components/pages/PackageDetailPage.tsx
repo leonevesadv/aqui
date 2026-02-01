@@ -143,34 +143,42 @@ export default function PackageDetailPage() {
                       <p className="font-paragraph font-medium text-base">{packageData.duration}</p>
                     </div>
                   </div>
-                  {packageData.dataDeInicio && (
-                    <div className="flex items-start text-gray-600 pb-4 border-b border-gray-200">
-                      <CalendarDays className="w-5 h-5 mr-3 text-primary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-paragraph text-sm text-gray-500">Data de Início</p>
-                        <p className="font-paragraph font-medium text-base">
-                          {new Date(packageData.dataDeInicio).toLocaleDateString('pt-BR', { 
-                            year: 'numeric', 
-                            month: 'long', 
-                            day: 'numeric' 
-                          })}
-                        </p>
-                      </div>
-                    </div>
-                  )}
-                  {packageData.dataDeFim && (
-                    <div className="flex items-start text-gray-600">
-                      <CalendarDays className="w-5 h-5 mr-3 text-primary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-paragraph text-sm text-gray-500">Data de Término</p>
-                        <p className="font-paragraph font-medium text-base">
-                          {new Date(packageData.dataDeFim).toLocaleDateString('pt-BR', { 
-                            year: 'numeric', 
-                            month: 'long', 
-                            day: 'numeric' 
-                          })}
-                        </p>
-                      </div>
+                  {(packageData.dataDeInicio || packageData.dataDeFim) && (
+                    <div className="space-y-3 py-4 px-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
+                      {packageData.dataDeInicio && (
+                        <div className="flex items-center gap-3">
+                          <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-full flex-shrink-0">
+                            <Calendar className="w-4 h-4 text-white" />
+                          </div>
+                          <div>
+                            <p className="font-paragraph text-xs text-gray-500 uppercase tracking-wide">Início</p>
+                            <p className="font-paragraph font-medium text-base text-primary">
+                              {new Date(packageData.dataDeInicio).toLocaleDateString('pt-BR', { 
+                                year: 'numeric', 
+                                month: 'long', 
+                                day: 'numeric' 
+                              })}
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                      {packageData.dataDeFim && (
+                        <div className="flex items-center gap-3">
+                          <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-full flex-shrink-0">
+                            <Calendar className="w-4 h-4 text-white" />
+                          </div>
+                          <div>
+                            <p className="font-paragraph text-xs text-gray-500 uppercase tracking-wide">Término</p>
+                            <p className="font-paragraph font-medium text-base text-primary">
+                              {new Date(packageData.dataDeFim).toLocaleDateString('pt-BR', { 
+                                year: 'numeric', 
+                                month: 'long', 
+                                day: 'numeric' 
+                              })}
+                            </p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
