@@ -191,20 +191,22 @@ export default function PackageDetailPage() {
               <div className="space-y-8">
                 <h2 className="font-heading font-light text-xl">Roteiro Detalhado</h2>
                 {itineraryItems.length > 0 ? (
-                  <div className="space-y-4">
+                  <div className="space-y-6">
                     {itineraryItems.map((item, index) => {
                       const isDayHeader = item.trim().match(/^\d+º\s+DIA/i);
                       return (
                         <div key={index}>
                           {isDayHeader ? (
-                            <div className="flex items-center gap-3 py-3 px-4 bg-blue-50 rounded-lg border-l-4 border-primary">
-                              <Calendar className="w-5 h-5 text-primary flex-shrink-0" />
+                            <div className="flex items-center gap-4 py-4 px-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border-l-4 border-primary shadow-sm">
+                              <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full flex-shrink-0">
+                                <Calendar className="w-5 h-5 text-white" />
+                              </div>
                               <h3 className="font-heading text-lg font-light text-primary">
                                 {item.trim()}
                               </h3>
                             </div>
                           ) : (
-                            <p className="font-paragraph text-gray-700 leading-relaxed text-sm pl-8">
+                            <p className="font-paragraph text-gray-700 leading-relaxed text-base pl-14">
                               {item.trim()}
                             </p>
                           )}
