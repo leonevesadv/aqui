@@ -5,7 +5,7 @@ import { PacotesdeViagem } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { MapPin, Clock, Users, Check, ArrowLeft, Phone, Mail, Calendar } from 'lucide-react';
+import { MapPin, Clock, Users, Check, ArrowLeft, Phone, Mail, Calendar, CalendarDays } from 'lucide-react';
 
 export default function PackageDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -128,21 +128,51 @@ export default function PackageDetailPage() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="flex items-center text-gray-600">
-                    <MapPin className="w-5 h-5 mr-3 text-primary" />
+                <div className="space-y-4">
+                  <div className="flex items-start text-gray-600 pb-4 border-b border-gray-200">
+                    <MapPin className="w-5 h-5 mr-3 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="font-paragraph text-sm text-gray-500">Destino</p>
-                      <p className="font-paragraph font-medium">{packageData.destination}</p>
+                      <p className="font-paragraph font-medium text-base">{packageData.destination}</p>
                     </div>
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <Clock className="w-5 h-5 mr-3 text-primary" />
+                  <div className="flex items-start text-gray-600 pb-4 border-b border-gray-200">
+                    <Clock className="w-5 h-5 mr-3 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="font-paragraph text-sm text-gray-500">Duração</p>
-                      <p className="font-paragraph font-medium">{packageData.duration}</p>
+                      <p className="font-paragraph font-medium text-base">{packageData.duration}</p>
                     </div>
                   </div>
+                  {packageData.dataDeInicio && (
+                    <div className="flex items-start text-gray-600 pb-4 border-b border-gray-200">
+                      <CalendarDays className="w-5 h-5 mr-3 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-paragraph text-sm text-gray-500">Data de Início</p>
+                        <p className="font-paragraph font-medium text-base">
+                          {new Date(packageData.dataDeInicio).toLocaleDateString('pt-BR', { 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                          })}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                  {packageData.dataDeFim && (
+                    <div className="flex items-start text-gray-600">
+                      <CalendarDays className="w-5 h-5 mr-3 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-paragraph text-sm text-gray-500">Data de Término</p>
+                        <p className="font-paragraph font-medium text-base">
+                          {new Date(packageData.dataDeFim).toLocaleDateString('pt-BR', { 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                          })}
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="border-t border-gray-200 pt-6">
