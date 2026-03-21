@@ -260,7 +260,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-12 py-4 text-lg">
+            <Button asChild size="lg" className="bg-[#ffac00] text-white hover:bg-[#ffac00]/90 px-12 py-4 text-lg">
               <a href="#pacotes">Ver Todos os Pacotes</a>
             </Button>
           </div>
