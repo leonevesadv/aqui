@@ -372,7 +372,7 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#ffac00] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* First Testimonial */}
             <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
               <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">"</div>
@@ -418,6 +418,32 @@ export default function HomePage() {
                     </p>
                     <p className="font-paragraph text-sm text-gray-500">
                       Cliente Alliance Viagens
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute bottom-6 right-8 text-6xl opacity-20 font-serif rotate-180 bg-[transparent] text-[#ffac00ff]">"</div>
+            </div>
+
+            {/* Third Testimonial - Alessandra Tavares */}
+            <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
+              <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">"</div>
+              <div className="relative z-10">
+                <p className="font-paragraph text-lg md:text-xl leading-relaxed text-gray-700 mb-8 italic">
+                  "Realizei minha peregrinação à Fátima, em Portugal, local de Aparição da Virgem Maria aos três pastorinhos, no ano de 2018 com a Alliance Viagens. Seguindo o roteiro, visitamos também o Vaticano e tive oportunidade de ver de perto o Papa Francisco, na Praça São Pedro. Pretendo agora viajar para a Terra Santa novamente pela Alliance."
+                </p>
+                <div className="flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="flex items-center justify-center mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-[#ffac00ff] stroke-[#ffac00]" style={{ strokeWidth: '2px' }} />
+                      ))}
+                    </div>
+                    <p className="font-heading text-lg font-semibold text-foreground">
+                      Alessandra Tavares
+                    </p>
+                    <p className="font-paragraph text-sm text-gray-500">
+                      Cliente desde 2018
                     </p>
                   </div>
                 </div>
