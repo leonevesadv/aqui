@@ -174,7 +174,7 @@ export default function AparecidaCamposJordaoPage() {
 
             {/* Highlight 3 */}
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-primary">
                 <Leaf className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-heading text-xl font-light mb-3">Natureza Preservada</h3>
@@ -186,7 +186,7 @@ export default function AparecidaCamposJordaoPage() {
 
             {/* Highlight 4 */}
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-primary">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-heading text-xl font-light mb-3">Experiência Espiritual</h3>
