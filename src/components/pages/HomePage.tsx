@@ -334,7 +334,7 @@ export default function HomePage() {
                   <div className="text-center">
                     <div className="flex items-center justify-center mb-2">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-accent fill-current" />
+                        <Star key={i} className="w-5 h-5 text-accent shadow-[12px_12px_4px_0px_#d9d9d9] fill-[#ffac00ff]" />
                       ))}
                     </div>
                     <p className="font-heading text-lg font-semibold text-foreground">
