@@ -31,7 +31,7 @@ export default {
                 'secondary-foreground': '#1e3a8a',
                 'primary-foreground': '#FFFFFF',
                 primary: '#2563eb', // Azul principal da Alliance
-                accent: '#f97316', // Laranja vibrante da Alliance
+                accent: '#ffac00', // Laranja vibrante da Alliance
                 'accent-foreground': '#FFFFFF',
                 // Cores adicionais para maior flexibilidade
                 'blue-50': '#eff6ff',
