@@ -320,12 +320,12 @@ export default function HomePage() {
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
               DEPOIMENTOS DOS CLIENTES
             </h2>
-            <div className="w-24 h-1 bg-accent mx-auto"></div>
+            <div className="w-24 h-1 bg-[#ffac00] mx-auto"></div>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
-              <div className="absolute top-6 left-8 text-6xl text-accent opacity-20 font-serif">"</div>
+              <div className="absolute top-6 left-8 text-6xl text-accent opacity-20 font-serif">\"</div>
               <div className="relative z-10">
                 <p className="font-paragraph text-lg md:text-xl leading-relaxed text-gray-700 mb-8 italic">
                   "Viajei para a Terra Santa com a Alliance Viagens em 2016, realizando um sonho muito antigo de conhecer os locais em que Jesus realizou os milagres, transformando a vida das pessoas e trazendo a Boa Notícia de um mundo melhor. Uma viagem magnífica!"
@@ -346,7 +346,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="absolute bottom-6 right-8 text-6xl text-accent opacity-20 font-serif rotate-180">"</div>
+              <div className="absolute bottom-6 right-8 text-6xl text-accent opacity-20 font-serif rotate-180">\"</div>
             </div>
           </div>
         </div>
