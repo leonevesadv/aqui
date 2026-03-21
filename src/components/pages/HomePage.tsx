@@ -147,7 +147,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Why Choose Us Section */}
-      <section className="w-full py-20 bg-secondary">
+      <section className="w-full bg-secondary p-0 py-20 px-0">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -171,7 +171,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto bg-[#ffac00]">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto bg-[#ffac00ff]">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-heading text-2xl font-semibold text-foreground">
