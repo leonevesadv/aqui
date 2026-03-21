@@ -138,7 +138,7 @@ export default function HomePage() {
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 text-lg">
                   <a href="#pacotes" className="bg-[#ffac00]">Explorar Destinos</a>
                 </Button>
-                <Button variant="outline" asChild size="lg" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg">
+                <Button asChild size="lg" className="bg-[#ffac00] text-white hover:bg-[#ffac00]/90 px-8 py-4 text-lg">
                   <Link to="/contact">Solicitar Orçamento</Link>
                 </Button>
               </div>
