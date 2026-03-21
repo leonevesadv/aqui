@@ -346,7 +346,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="absolute bottom-6 right-8 text-6xl text-accent opacity-20 font-serif rotate-180">\"</div>
+              <div className="absolute bottom-6 right-8 text-6xl opacity-20 font-serif rotate-180 text-[#ffac00ff]">\"</div>
             </div>
           </div>
         </div>
