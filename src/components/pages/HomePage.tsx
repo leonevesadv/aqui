@@ -13,28 +13,10 @@ export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchAndUpdatePackages = async () => {
+    const fetchPackages = async () => {
       try {
         const { items } = await BaseCrudService.getAll<PacotesdeViagem>('pacotesdeviagem');
-        
-        // Update all packages with the new dates
-        const updatePromises = items.map(async (pkg) => {
-          try {
-            await BaseCrudService.update<PacotesdeViagem>('pacotesdeviagem', {
-              ...pkg,
-              dataDeInicio: new Date('2025-10-15'),
-              dataDeFim: new Date('2025-12-20')
-            });
-          } catch (error) {
-            console.error(`Error updating package ${pkg._id}:`, error);
-          }
-        });
-        
-        await Promise.all(updatePromises);
-        
-        // Fetch updated packages
-        const { items: updatedItems } = await BaseCrudService.getAll<PacotesdeViagem>('pacotesdeviagem');
-        setFeaturedPackages(updatedItems.slice(0, 3));
+        setFeaturedPackages(items.slice(0, 3));
       } catch (error) {
         console.error('Error fetching packages:', error);
       } finally {
@@ -42,7 +24,7 @@ export default function HomePage() {
       }
     };
 
-    fetchAndUpdatePackages();
+    fetchPackages();
   }, []);
 
   if (isLoading) {
