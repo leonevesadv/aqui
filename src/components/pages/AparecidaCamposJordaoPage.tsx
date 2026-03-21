@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
-import { MapPin, Clock, Users, Heart, Mountain, Church, Leaf, Zap, Phone, Mail, ArrowLeft } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { MapPin, Clock, Users, Heart, Mountain, Church, Leaf, Zap, Phone, Mail, ArrowLeft, Plane, DollarSign, FileText } from 'lucide-react';
 
 export default function AparecidaCamposJordaoPage() {
   return (
@@ -226,114 +227,457 @@ export default function AparecidaCamposJordaoPage() {
         </div>
       </section>
 
-      {/* Itinerary Section */}
+      {/* Tabs Section */}
       <section className="w-full py-16 bg-white">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl font-light mb-4">Roteiro Detalhado</h2>
+            <h2 className="font-heading text-4xl font-light mb-4">Informações do Destino</h2>
             <p className="font-paragraph text-gray-600 max-w-2xl mx-auto">
-              Conheça dia a dia o que você viverá nesta jornada espiritual e natural
+              Explore todos os detalhes sobre sua jornada espiritual e natural
             </p>
           </div>
 
-          <div className="space-y-8">
-            {/* Day 1 */}
-            <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="font-heading text-2xl font-light text-primary mb-2">1º DIA - 27/03/2026</h3>
-                  <p className="font-paragraph text-lg font-medium text-gray-800">Fortaleza | Guarulhos | Campos do Jordão</p>
-                </div>
-              </div>
-              <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
-                <p>
-                  Encontro no aeroporto, conforme horário previamente indicado, para embarque com destino a Guarulhos. 
-                  Chegada e continuação da viagem para Campos do Jordão.
-                </p>
-                <p>
-                  City tour guiado pelos principais pontos turísticos. Check-in, jantar incluído e noite livre.
-                </p>
-              </div>
-            </div>
+          <Tabs defaultValue="roteiro" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8 bg-secondary">
+              <TabsTrigger value="roteiro" className="font-paragraph">Roteiro</TabsTrigger>
+              <TabsTrigger value="servicos" className="font-paragraph">Serviços</TabsTrigger>
+              <TabsTrigger value="aereo" className="font-paragraph">Aéreo</TabsTrigger>
+              <TabsTrigger value="valores" className="font-paragraph">Valores</TabsTrigger>
+              <TabsTrigger value="documentos" className="font-paragraph">Documentos</TabsTrigger>
+            </TabsList>
 
-            {/* Day 2 */}
-            <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="font-heading text-2xl font-light text-primary mb-2">2º DIA - 28/03/2026</h3>
-                  <p className="font-paragraph text-lg font-medium text-gray-800">Campos do Jordão | Aparecida</p>
+            {/* Roteiro Tab */}
+            <TabsContent value="roteiro" className="space-y-8">
+              {/* Day 1 */}
+              <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="font-heading text-2xl font-light text-primary mb-2">1º DIA - 27/03/2026</h3>
+                    <p className="font-paragraph text-lg font-medium text-gray-800">Fortaleza | Guarulhos | Campos do Jordão</p>
+                  </div>
+                </div>
+                <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
+                  <p>
+                    Encontro no aeroporto, conforme horário previamente indicado, para embarque com destino a Guarulhos. 
+                    Chegada e continuação da viagem para Campos do Jordão.
+                  </p>
+                  <p>
+                    City tour guiado pelos principais pontos turísticos. Check-in, jantar incluído e noite livre.
+                  </p>
                 </div>
               </div>
-              <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
-                <p>
-                  Café da manhã no hotel. Manhã livre, com opção de passeio de trenzinho.
-                </p>
-                <p>
-                  Visita incluída a uma loja de vinhos e chocolates para degustação. Tempo livre para almoço (não incluso).
-                </p>
-                <p>
-                  À tarde, viagem com destino a Aparecida. Check-in, hospedagem e jantar.
-                </p>
-              </div>
-            </div>
 
-            {/* Day 3 */}
-            <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="font-heading text-2xl font-light text-primary mb-2">3º DIA - 29/03/2026</h3>
-                  <p className="font-paragraph text-lg font-medium text-gray-800">Aparecida | Canção Nova (Domingo de Ramos)</p>
+              {/* Day 2 */}
+              <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="font-heading text-2xl font-light text-primary mb-2">2º DIA - 28/03/2026</h3>
+                    <p className="font-paragraph text-lg font-medium text-gray-800">Campos do Jordão | Aparecida</p>
+                  </div>
+                </div>
+                <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
+                  <p>
+                    Café da manhã no hotel. Manhã livre, com opção de passeio de trenzinho.
+                  </p>
+                  <p>
+                    Visita incluída a uma loja de vinhos e chocolates para degustação. Tempo livre para almoço (não incluso).
+                  </p>
+                  <p>
+                    À tarde, viagem com destino a Aparecida. Check-in, hospedagem e jantar.
+                  </p>
                 </div>
               </div>
-              <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
-                <p>
-                  Após o café da manhã, saída para Guaratinguetá, onde visitaremos a Casa e o Museu de Frei Galvão.
-                </p>
-                <p>
-                  Em seguida, continuação até a Canção Nova, com participação na Santa Missa no Santuário do Pai das Misericórdias.
-                </p>
-                <p>
-                  Tempo livre para possível participação na palestra do Frei Gilson (a confirmar). Retorno a Aparecida, hospedagem e jantar incluído.
-                </p>
-              </div>
-            </div>
 
-            {/* Day 4 */}
-            <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="font-heading text-2xl font-light text-primary mb-2">4º DIA - 30/03/2026</h3>
-                  <p className="font-paragraph text-lg font-medium text-gray-800">Aparecida (Visitas Devocionais)</p>
+              {/* Day 3 */}
+              <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="font-heading text-2xl font-light text-primary mb-2">3º DIA - 29/03/2026</h3>
+                    <p className="font-paragraph text-lg font-medium text-gray-800">Aparecida | Canção Nova (Domingo de Ramos)</p>
+                  </div>
+                </div>
+                <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
+                  <p>
+                    Após o café da manhã, saída para Guaratinguetá, onde visitaremos a Casa e o Museu de Frei Galvão.
+                  </p>
+                  <p>
+                    Em seguida, continuação até a Canção Nova, com participação na Santa Missa no Santuário do Pai das Misericórdias.
+                  </p>
+                  <p>
+                    Tempo livre para possível participação na palestra do Frei Gilson (a confirmar). Retorno a Aparecida, hospedagem e jantar incluído.
+                  </p>
                 </div>
               </div>
-              <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
-                <p>
-                  Café da manhã. Visita guiada às Basílicas e a todo o complexo do Santuário Nacional.
-                </p>
-                <p>
-                  Tempo livre para passeios opcionais, como a subida ao Mirante da Torre ou o passeio de bondinho até o Morro do Cruzeiro.
-                </p>
-                <p>
-                  À tarde, faremos o Caminho do Rosário. Jantar e hospedagem.
-                </p>
-              </div>
-            </div>
 
-            {/* Day 5 */}
-            <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="font-heading text-2xl font-light text-primary mb-2">5º DIA - 31/03/2026</h3>
-                  <p className="font-paragraph text-lg font-medium text-gray-800">Aparecida | Fortaleza</p>
+              {/* Day 4 */}
+              <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="font-heading text-2xl font-light text-primary mb-2">4º DIA - 30/03/2026</h3>
+                    <p className="font-paragraph text-lg font-medium text-gray-800">Aparecida (Visitas Devocionais)</p>
+                  </div>
+                </div>
+                <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
+                  <p>
+                    Café da manhã. Visita guiada às Basílicas e a todo o complexo do Santuário Nacional.
+                  </p>
+                  <p>
+                    Tempo livre para passeios opcionais, como a subida ao Mirante da Torre ou o passeio de bondinho até o Morro do Cruzeiro.
+                  </p>
+                  <p>
+                    À tarde, faremos o Caminho do Rosário. Jantar e hospedagem.
+                  </p>
                 </div>
               </div>
-              <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
-                <p>
-                  Café da manhã. No horário a ser informado, check-out no hotel e traslado ao aeroporto de Guarulhos para embarque de retorno a Fortaleza.
-                </p>
+
+              {/* Day 5 */}
+              <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="font-heading text-2xl font-light text-primary mb-2">5º DIA - 31/03/2026</h3>
+                    <p className="font-paragraph text-lg font-medium text-gray-800">Aparecida | Fortaleza</p>
+                  </div>
+                </div>
+                <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
+                  <p>
+                    Café da manhã. No horário a ser informado, check-out no hotel e traslado ao aeroporto de Guarulhos para embarque de retorno a Fortaleza.
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
+            </TabsContent>
+
+            {/* Serviços Tab */}
+            <TabsContent value="servicos" className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-blue-50 p-8 rounded-lg">
+                  <h3 className="font-heading text-xl font-light text-primary mb-4">Hospedagem</h3>
+                  <ul className="font-paragraph text-gray-700 space-y-2">
+                    <li>• Hotéis 3 e 4 estrelas</li>
+                    <li>• Quartos confortáveis e bem equipados</li>
+                    <li>• Café da manhã incluído</li>
+                    <li>• Acesso a piscina e academia</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-8 rounded-lg">
+                  <h3 className="font-heading text-xl font-light text-primary mb-4">Refeições</h3>
+                  <ul className="font-paragraph text-gray-700 space-y-2">
+                    <li>• Café da manhã diário</li>
+                    <li>• Jantares incluídos</li>
+                    <li>• Almoços selecionados</li>
+                    <li>• Degustação de vinhos e chocolates</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-8 rounded-lg">
+                  <h3 className="font-heading text-xl font-light text-primary mb-4">Transporte</h3>
+                  <ul className="font-paragraph text-gray-700 space-y-2">
+                    <li>• Passagens aéreas ida e volta</li>
+                    <li>• Traslados aeroporto-hotel</li>
+                    <li>• Ônibus climatizado para passeios</li>
+                    <li>• Guia acompanhante em português</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-8 rounded-lg">
+                  <h3 className="font-heading text-xl font-light text-primary mb-4">Atividades</h3>
+                  <ul className="font-paragraph text-gray-700 space-y-2">
+                    <li>• City tour em Campos do Jordão</li>
+                    <li>• Visitas guiadas às Basílicas</li>
+                    <li>• Passeios opcionais</li>
+                    <li>• Experiências espirituais</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-8 rounded-lg">
+                  <h3 className="font-heading text-xl font-light text-primary mb-4">Seguro</h3>
+                  <ul className="font-paragraph text-gray-700 space-y-2">
+                    <li>• Seguro viagem incluído</li>
+                    <li>• Cobertura médica</li>
+                    <li>• Assistência 24 horas</li>
+                    <li>• Proteção bagagem</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-8 rounded-lg">
+                  <h3 className="font-heading text-xl font-light text-primary mb-4">Acompanhamento</h3>
+                  <ul className="font-paragraph text-gray-700 space-y-2">
+                    <li>• Guia especializado</li>
+                    <li>• Suporte em português</li>
+                    <li>• Atendimento personalizado</li>
+                    <li>• Flexibilidade no roteiro</li>
+                  </ul>
+                </div>
+              </div>
+            </TabsContent>
+
+            {/* Aéreo Tab */}
+            <TabsContent value="aereo" className="space-y-6">
+              <div className="bg-blue-50 p-8 rounded-lg">
+                <div className="flex items-start gap-4 mb-6">
+                  <Plane className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-heading text-2xl font-light text-primary mb-2">Informações de Voo</h3>
+                    <p className="font-paragraph text-gray-700">Detalhes completos sobre seus voos de ida e volta</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                  <div className="border-l-4 border-primary pl-6">
+                    <h4 className="font-heading text-lg font-light text-primary mb-4">Voo de Ida</h4>
+                    <div className="space-y-3 font-paragraph text-gray-700">
+                      <div>
+                        <p className="text-sm text-gray-500">Data</p>
+                        <p className="font-medium">27 de Março de 2026</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500">Saída</p>
+                        <p className="font-medium">Fortaleza (FOR) - Horário a confirmar</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500">Chegada</p>
+                        <p className="font-medium">São Paulo/Guarulhos (GRU)</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500">Companhia Aérea</p>
+                        <p className="font-medium">A confirmar</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="border-l-4 border-primary pl-6">
+                    <h4 className="font-heading text-lg font-light text-primary mb-4">Voo de Retorno</h4>
+                    <div className="space-y-3 font-paragraph text-gray-700">
+                      <div>
+                        <p className="text-sm text-gray-500">Data</p>
+                        <p className="font-medium">31 de Março de 2026</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500">Saída</p>
+                        <p className="font-medium">São Paulo/Guarulhos (GRU) - Horário a confirmar</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500">Chegada</p>
+                        <p className="font-medium">Fortaleza (FOR)</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500">Companhia Aérea</p>
+                        <p className="font-medium">A confirmar</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
+                  <h4 className="font-heading text-lg font-light mb-4">Informações Importantes</h4>
+                  <ul className="font-paragraph text-gray-700 space-y-2">
+                    <li>• Chegue ao aeroporto com 3 horas de antecedência</li>
+                    <li>• Leve documento de identidade válido (RG ou Passaporte)</li>
+                    <li>• Bagagem: 1 mala de até 23kg + 1 bagagem de mão</li>
+                    <li>• Refeições a bordo incluídas</li>
+                    <li>• Assentos pré-selecionados</li>
+                  </ul>
+                </div>
+              </div>
+            </TabsContent>
+
+            {/* Valores Tab */}
+            <TabsContent value="valores" className="space-y-6">
+              <div className="bg-blue-50 p-8 rounded-lg">
+                <div className="flex items-start gap-4 mb-6">
+                  <DollarSign className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-heading text-2xl font-light text-primary mb-2">Tabela de Preços</h3>
+                    <p className="font-paragraph text-gray-700">Valores por pessoa em reais (R$)</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-white p-6 rounded-lg border-2 border-primary">
+                    <h4 className="font-heading text-lg font-light text-primary mb-4">Acomodação Dupla</h4>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center pb-3 border-b border-gray-200">
+                        <span className="font-paragraph text-gray-700">Valor por pessoa</span>
+                        <span className="font-heading text-2xl font-light text-primary">R$ 3.890</span>
+                      </div>
+                      <div className="text-sm font-paragraph text-gray-600 space-y-1">
+                        <p>✓ Passagens aéreas</p>
+                        <p>✓ Hospedagem 4 noites</p>
+                        <p>✓ Refeições incluídas</p>
+                        <p>✓ Guia acompanhante</p>
+                        <p>✓ Seguro viagem</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg border-2 border-accent">
+                    <h4 className="font-heading text-lg font-light text-accent mb-4">Acomodação Tripla</h4>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center pb-3 border-b border-gray-200">
+                        <span className="font-paragraph text-gray-700">Valor por pessoa</span>
+                        <span className="font-heading text-2xl font-light text-accent">R$ 3.490</span>
+                      </div>
+                      <div className="text-sm font-paragraph text-gray-600 space-y-1">
+                        <p>✓ Passagens aéreas</p>
+                        <p>✓ Hospedagem 4 noites</p>
+                        <p>✓ Refeições incluídas</p>
+                        <p>✓ Guia acompanhante</p>
+                        <p>✓ Seguro viagem</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
+                  <h4 className="font-heading text-lg font-light mb-4">O que está incluído</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-paragraph text-gray-700">
+                    <div className="flex gap-3">
+                      <span className="text-primary font-bold">✓</span>
+                      <span>Passagens aéreas Fortaleza - São Paulo - Fortaleza</span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-primary font-bold">✓</span>
+                      <span>Hospedagem em hotéis 3 e 4 estrelas</span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-primary font-bold">✓</span>
+                      <span>Café da manhã diário</span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-primary font-bold">✓</span>
+                      <span>Jantares incluídos</span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-primary font-bold">✓</span>
+                      <span>Traslados aeroporto-hotel</span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-primary font-bold">✓</span>
+                      <span>Ônibus climatizado</span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-primary font-bold">✓</span>
+                      <span>Guia especializado em português</span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-primary font-bold">✓</span>
+                      <span>Seguro viagem completo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 p-6 bg-orange-50 rounded-lg border border-accent">
+                  <h4 className="font-heading text-lg font-light text-accent mb-3">Não incluído</h4>
+                  <ul className="font-paragraph text-gray-700 space-y-2">
+                    <li>• Almoços (exceto os mencionados no roteiro)</li>
+                    <li>• Passeios opcionais e atividades extras</li>
+                    <li>• Bebidas e despesas pessoais</li>
+                    <li>• Gorjetas e taxas adicionais</li>
+                  </ul>
+                </div>
+              </div>
+            </TabsContent>
+
+            {/* Documentos Tab */}
+            <TabsContent value="documentos" className="space-y-6">
+              <div className="bg-blue-50 p-8 rounded-lg">
+                <div className="flex items-start gap-4 mb-6">
+                  <FileText className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-heading text-2xl font-light text-primary mb-2">Documentação Necessária</h3>
+                    <p className="font-paragraph text-gray-700">Verifique todos os documentos necessários para sua viagem</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-white p-6 rounded-lg border-l-4 border-primary">
+                    <h4 className="font-heading text-lg font-light text-primary mb-4">Documentos Obrigatórios</h4>
+                    <ul className="font-paragraph text-gray-700 space-y-3">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold">•</span>
+                        <span><strong>RG ou Passaporte</strong> - Válido e em bom estado</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold">•</span>
+                        <span><strong>CPF</strong> - Documento original</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold">•</span>
+                        <span><strong>Comprovante de Vacinação</strong> - Se exigido</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold">•</span>
+                        <span><strong>Cartão de Vacinação</strong> - Atualizado</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg border-l-4 border-accent">
+                    <h4 className="font-heading text-lg font-light text-accent mb-4">Documentos Recomendados</h4>
+                    <ul className="font-paragraph text-gray-700 space-y-3">
+                      <li className="flex gap-3">
+                        <span className="text-accent font-bold">•</span>
+                        <span><strong>Cópia de Documentos</strong> - Deixe cópias com alguém</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-accent font-bold">•</span>
+                        <span><strong>Comprovante de Renda</strong> - Para seguro viagem</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-accent font-bold">•</span>
+                        <span><strong>Cartão de Crédito</strong> - Para emergências</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-accent font-bold">•</span>
+                        <span><strong>Contatos de Emergência</strong> - Anotados</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
+                  <h4 className="font-heading text-lg font-light mb-4">Procedimentos Importantes</h4>
+                  <div className="space-y-4 font-paragraph text-gray-700">
+                    <div>
+                      <p className="font-medium text-primary mb-2">Antes da Viagem:</p>
+                      <ul className="space-y-1 ml-4">
+                        <li>✓ Verifique a validade de seus documentos</li>
+                        <li>✓ Faça cópias de documentos importantes</li>
+                        <li>✓ Comunique seu banco sobre a viagem</li>
+                        <li>✓ Confirme informações de voo 48h antes</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-medium text-primary mb-2">No Aeroporto:</p>
+                      <ul className="space-y-1 ml-4">
+                        <li>✓ Chegue com 3 horas de antecedência</li>
+                        <li>✓ Leve documentos originais</li>
+                        <li>✓ Tenha seu comprovante de reserva</li>
+                        <li>✓ Passe pela segurança com antecedência</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-medium text-primary mb-2">Durante a Viagem:</p>
+                      <ul className="space-y-1 ml-4">
+                        <li>✓ Mantenha documentos em local seguro</li>
+                        <li>✓ Guarde comprovantes de transações</li>
+                        <li>✓ Tenha contato de emergência à mão</li>
+                        <li>✓ Siga orientações do guia</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 p-6 bg-orange-50 rounded-lg border border-accent">
+                  <h4 className="font-heading text-lg font-light text-accent mb-3">Atenção</h4>
+                  <p className="font-paragraph text-gray-700">
+                    Todos os documentos devem estar em perfeito estado. Documentos danificados, rasgados ou ilegíveis podem resultar em impedimento de viagem. 
+                    Recomendamos verificar com antecedência os requisitos específicos de cada destino.
+                  </p>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
