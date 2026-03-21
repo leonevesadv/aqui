@@ -212,8 +212,8 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredPackages.map((pkg) => (
-              <div key={pkg._id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="relative h-64">
+              <div key={pkg._id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col min-h-[580px]">
+                <div className="relative h-[220px] flex-shrink-0">
                   <Image
                     src={pkg.mainImage || "https://static.wixstatic.com/media/e4152c_6ffe89ea471545df882ace93c2483b8b~mv2.png?originWidth=384&originHeight=384"}
                     alt={pkg.packageName || "Pacote de viagem"}
@@ -224,33 +224,33 @@ export default function HomePage() {
                     Oferta Especial
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-2xl font-semibold text-foreground mb-3">
+                <div className="px-5 py-4 flex flex-col flex-grow">
+                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3 line-clamp-2">
                     {pkg.packageName}
                   </h3>
-                  <p className="font-paragraph text-gray-600 mb-4 line-clamp-2">
+                  <p className="font-paragraph text-sm text-gray-600 mb-4 line-clamp-2">
                     {pkg.shortDescription}
                   </p>
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-gray-500">
-                      <MapPin className="w-4 h-4 mr-2 text-primary" />
-                      <span className="font-paragraph">{pkg.destination}</span>
+                  <div className="space-y-2 mb-6 flex-grow">
+                    <div className="flex items-center text-xs text-gray-600">
+                      <MapPin className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
+                      <span className="font-paragraph text-xs">{pkg.destination}</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Clock className="w-4 h-4 mr-2 text-primary" />
-                      <span className="font-paragraph">{pkg.duration}</span>
+                    <div className="flex items-center text-xs text-gray-600">
+                      <Clock className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
+                      <span className="font-paragraph text-xs">{pkg.duration}</span>
                     </div>
                     {pkg.dataDeInicio && pkg.dataDeFim && (
-                      <div className="flex items-center text-sm text-gray-500">
-                        <Calendar className="w-4 h-4 mr-2 text-primary" />
-                        <span className="font-paragraph">
+                      <div className="flex items-center text-xs text-gray-600">
+                        <Calendar className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
+                        <span className="font-paragraph text-xs">
                           {format(new Date(pkg.dataDeInicio), 'dd/MM/yyyy', { locale: ptBR })} - {format(new Date(pkg.dataDeFim), 'dd/MM/yyyy', { locale: ptBR })}
                         </span>
                       </div>
                     )}
                   </div>
-                  <div className="flex justify-end">
-                    <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                  <div className="mt-auto">
+                    <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                       <Link to={`/packages/${pkg._id}`}>Ver Detalhes</Link>
                     </Button>
                   </div>
