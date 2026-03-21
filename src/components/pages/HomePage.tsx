@@ -331,7 +331,7 @@ export default function HomePage() {
                   "Viajei para a Terra Santa com a Alliance Viagens em 2016, realizando um sonho muito antigo de conhecer os locais em que Jesus realizou os milagres, transformando a vida das pessoas e trazendo a Boa Notícia de um mundo melhor. Uma viagem magnífica!"
                 </p>
                 <div className="flex items-center justify-center">
-                  <div className="text-center shadow-[12px_12px_4px_0px_#d9d9d9] opacity-[1]">
+                  <div className="text-center">
                     <div className="flex items-center justify-center mb-2">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-5 h-5 fill-[#ffac00ff] stroke-[#ffac00]" style={{ strokeWidth: '2px' }} />
