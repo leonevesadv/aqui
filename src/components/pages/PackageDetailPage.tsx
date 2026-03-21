@@ -209,7 +209,7 @@ export default function PackageDetailPage() {
                       </p>
                     </div>
                     <div className="space-y-3">
-                      <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
+                      <Button className="bg-[#ffac00] text-white hover:bg-[#ffac00]/90 w-full">
                         <Phone className="w-4 h-4 mr-2" />
                         Solicitar Orçamento
                       </Button>
@@ -331,7 +331,7 @@ export default function PackageDetailPage() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
+                    <Button className="bg-[#ffac00] text-white hover:bg-[#ffac00]/90 w-full">
                       <Phone className="w-4 h-4 mr-2" />
                       Solicitar Orçamento
                     </Button>
