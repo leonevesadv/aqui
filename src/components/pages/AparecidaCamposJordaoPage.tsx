@@ -33,7 +33,6 @@ export default function AparecidaCamposJordaoPage() {
           </nav>
         </div>
       </header>
-
       {/* Back Button */}
       <section className="w-full py-6 bg-gray-50">
         <div className="max-w-[120rem] mx-auto px-6">
@@ -45,7 +44,6 @@ export default function AparecidaCamposJordaoPage() {
           </Button>
         </div>
       </section>
-
       {/* Hero Section */}
       <section className="w-full">
         <div className="max-w-[120rem] mx-auto">
@@ -107,7 +105,6 @@ export default function AparecidaCamposJordaoPage() {
           </div>
         </div>
       </section>
-
       {/* About Section */}
       <section className="w-full py-16 bg-white">
         <div className="max-w-[120rem] mx-auto px-6">
@@ -140,7 +137,6 @@ export default function AparecidaCamposJordaoPage() {
           </div>
         </div>
       </section>
-
       {/* Highlights Section */}
       <section className="w-full py-16 bg-secondary">
         <div className="max-w-[120rem] mx-auto px-6">
@@ -226,7 +222,6 @@ export default function AparecidaCamposJordaoPage() {
           </div>
         </div>
       </section>
-
       {/* Tabs Section */}
       <section className="w-full py-16 bg-white">
         <div className="max-w-[120rem] mx-auto px-6">
@@ -393,7 +388,7 @@ export default function AparecidaCamposJordaoPage() {
 
               {/* Serviços Não Inclusos */}
               <div className="bg-orange-50 p-8 rounded-lg border-l-4 border-accent">
-                <h3 className="font-heading text-2xl font-light text-accent mb-6">Serviços Não Inclusos</h3>
+                <h3 className="font-heading text-2xl font-light mb-6 text-[#fdad06ff]">Serviços Não Inclusos</h3>
                 <div className="space-y-4 font-paragraph text-gray-700">
                   <div className="flex gap-3">
                     <span className="text-accent font-bold flex-shrink-0">•</span>
@@ -668,7 +663,7 @@ export default function AparecidaCamposJordaoPage() {
                       <div className="flex justify-between items-center">
                         <div>
                           <p className="font-paragraph text-gray-600 mb-2">Suplemento para</p>
-                          <h4 className="font-heading text-xl font-light text-accent">Apartamento Individual</h4>
+                          <h4 className="font-heading text-xl font-light text-secondary-foreground">Apartamento Individual</h4>
                         </div>
                         <div className="text-right">
                           <p className="font-heading text-3xl font-light text-accent">R$ 850</p>
@@ -807,7 +802,6 @@ export default function AparecidaCamposJordaoPage() {
           </Tabs>
         </div>
       </section>
-
       {/* Attractions Section */}
       <section className="w-full py-16 bg-white">
         <div className="max-w-[120rem] mx-auto px-6">
@@ -910,7 +904,6 @@ export default function AparecidaCamposJordaoPage() {
           </div>
         </div>
       </section>
-
       {/* Practical Information */}
       <section className="w-full py-16 bg-secondary">
         <div className="max-w-[120rem] mx-auto px-6">
@@ -979,7 +972,6 @@ export default function AparecidaCamposJordaoPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="w-full py-16 bg-white">
         <div className="max-w-[120rem] mx-auto px-6">
@@ -1003,7 +995,6 @@ export default function AparecidaCamposJordaoPage() {
           </div>
         </div>
       </section>
-
       {/* Related Packages */}
       <section className="w-full bg-gray-50 py-16">
         <div className="max-w-[120rem] mx-auto px-6">
@@ -1022,7 +1013,6 @@ export default function AparecidaCamposJordaoPage() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="w-full bg-footerbackground text-primary-foreground py-16">
         <div className="max-w-[120rem] mx-auto px-6">
