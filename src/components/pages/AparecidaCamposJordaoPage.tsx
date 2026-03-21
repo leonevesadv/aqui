@@ -691,6 +691,31 @@ export default function AparecidaCamposJordaoPage() {
                   </div>
                 </div>
 
+                {/* DOCUMENTOS NECESSÁRIOS - ALLIANCE VIAGENS */}
+                <div className="bg-white p-8 rounded-lg border-l-4 border-primary mb-8">
+                  <h4 className="font-heading text-xl font-light text-primary mb-6">DOCUMENTOS NECESSÁRIOS</h4>
+                  <div className="space-y-6">
+                    <div className="border-b border-gray-200 pb-6">
+                      <h5 className="font-heading text-lg font-light text-primary mb-3">Cópia do CPF e da Identidade</h5>
+                      <p className="font-paragraph text-gray-700 leading-relaxed">
+                        Cópia do CPF e da Identidade ou qualquer documento com foto e identificação legível e sem rasuras.
+                      </p>
+                    </div>
+                    <div className="border-b border-gray-200 pb-6">
+                      <h5 className="font-heading text-lg font-light text-primary mb-3">Ficha de Inscrição</h5>
+                      <p className="font-paragraph text-gray-700 leading-relaxed">
+                        Ficha de Inscrição ALLIANCE VIAGENS tudo devidamente preenchido e assinado.
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-heading text-lg font-light text-primary mb-3">Contrato ALLIANCE VIAGENS</h5>
+                      <p className="font-paragraph text-gray-700 leading-relaxed">
+                        Contrato ALLIANCE VIAGENS tudo devidamente preenchido e assinado.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                   <div className="bg-white p-6 rounded-lg border-l-4 border-primary">
                     <h4 className="font-heading text-lg font-light text-primary mb-4">Documentos Obrigatórios</h4>
