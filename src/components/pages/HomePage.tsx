@@ -257,6 +257,43 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+            {/* Aparecida e Campos do Jordão Card */}
+            <a href="https://www.allianceviagens.com/aparecida-campos-do-jord%C3%A3o" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 block">
+              <div className="relative h-64">
+                <Image
+                  src="https://static.wixstatic.com/media/e4152c_9bace95b26054372b0838eb49b98856a~mv2.png?originWidth=384&originHeight=384"
+                  alt="Aparecida e Campos do Jordão"
+                  className="w-full h-full object-cover"
+                  width={400}
+                />
+                <div className="absolute top-4 right-4 bg-[#ffac00] text-white px-3 py-1 rounded-full text-sm font-medium">
+                  Oferta Especial
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-heading text-2xl font-semibold text-foreground mb-3">
+                  Aparecida e Campos do Jordão
+                </h3>
+                <p className="font-paragraph text-gray-600 mb-4 line-clamp-2">
+                  Descubra a espiritualidade de Aparecida e a beleza natural de Campos do Jordão em uma jornada inesquecível.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <MapPin className="w-4 h-4 mr-2 text-primary" />
+                    <span className="font-paragraph">São Paulo</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-2 text-primary" />
+                    <span className="font-paragraph">3 a 4 dias</span>
+                  </div>
+                </div>
+                <div className="flex justify-end">
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    Ver Detalhes
+                  </Button>
+                </div>
+              </div>
+            </a>
           </div>
 
           <div className="text-center mt-12">
