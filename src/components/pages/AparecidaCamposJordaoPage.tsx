@@ -3,6 +3,7 @@ import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MapPin, Clock, Users, Heart, Mountain, Church, Leaf, Zap, Phone, Mail, ArrowLeft, Plane, DollarSign, FileText } from 'lucide-react';
+import Footer from '@/components/Footer';
 
 export default function AparecidaCamposJordaoPage() {
   return (
@@ -1014,49 +1015,7 @@ export default function AparecidaCamposJordaoPage() {
         </div>
       </section>
       {/* Footer */}
-      <footer className="w-full bg-footerbackground text-primary-foreground py-16">
-        <div className="max-w-[120rem] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <h3 className="font-heading text-2xl font-light">ALLIANCE</h3>
-              <p className="font-paragraph text-sm leading-relaxed opacity-90">
-                Especializados em turismo religioso, oferecemos jornadas espirituais 
-                autênticas aos destinos mais sagrados do mundo.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="font-heading text-lg font-light">Destinos</h4>
-              <ul className="space-y-2 font-paragraph text-sm">
-                <li><Link to="/packages" className="hover:opacity-75 transition-opacity">Terra Santa</Link></li>
-                <li><Link to="/packages" className="hover:opacity-75 transition-opacity">Roma e Vaticano</Link></li>
-                <li><Link to="/packages" className="hover:opacity-75 transition-opacity">Santiago de Compostela</Link></li>
-                <li><Link to="/packages" className="hover:opacity-75 transition-opacity">Fátima</Link></li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h4 className="font-heading text-lg font-light">Empresa</h4>
-              <ul className="space-y-2 font-paragraph text-sm">
-                <li><Link to="/about" className="hover:opacity-75 transition-opacity">Sobre Nós</Link></li>
-                <li><Link to="/contact" className="hover:opacity-75 transition-opacity">Contato</Link></li>
-                <li><Link to="/packages" className="hover:opacity-75 transition-opacity">Todos os Pacotes</Link></li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h4 className="font-heading text-lg font-light">Contato</h4>
-              <div className="space-y-2 font-paragraph text-sm">
-                <p>+55 (11) 3456-7890</p>
-                <p>contato@alliance.com.br</p>
-                <p>São Paulo, SP</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center">
-            <p className="font-paragraph text-sm opacity-75">
-              © 2024 Alliance Viagens & Turismo. Todos os direitos reservados.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
