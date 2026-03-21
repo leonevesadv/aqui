@@ -347,12 +347,77 @@ export default function AparecidaCamposJordaoPage() {
             </TabsContent>
 
             {/* Serviços Tab */}
-            <TabsContent value="servicos" className="space-y-6">
+            <TabsContent value="servicos" className="space-y-8">
+              {/* Serviços Inclusos */}
+              <div className="bg-blue-50 p-8 rounded-lg border-l-4 border-primary">
+                <h3 className="font-heading text-2xl font-light text-primary mb-6">Serviços Inclusos</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-paragraph text-gray-700">
+                  <div className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">✓</span>
+                    <span>Passagem aérea com mala de bordo até 10kg + mochila</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">✓</span>
+                    <span>Transporte exclusivo para o grupo (ônibus ou Micro)</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">✓</span>
+                    <span>Hotel Rainha dos Apóstolos</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">✓</span>
+                    <span>5 cafés da manhã incluídos</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">✓</span>
+                    <span>4 jantares incluídos</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">✓</span>
+                    <span>Guia de turismo para City Tour e visitas do programa</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">✓</span>
+                    <span>Visitas: Aparecida, Canção Nova, Guará, Campos do Jordão</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">✓</span>
+                    <span>Coordenador da Alliance Viajando com o Grupo</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">✓</span>
+                    <span>Seguro viagem e assistência</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Serviços Não Inclusos */}
+              <div className="bg-orange-50 p-8 rounded-lg border-l-4 border-accent">
+                <h3 className="font-heading text-2xl font-light text-accent mb-6">Serviços Não Inclusos</h3>
+                <div className="space-y-4 font-paragraph text-gray-700">
+                  <div className="flex gap-3">
+                    <span className="text-accent font-bold flex-shrink-0">•</span>
+                    <div>
+                      <p className="font-medium">Taxa de Embarque</p>
+                      <p className="text-sm text-gray-600">Valor aproximado de R$ 79,00</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-accent font-bold flex-shrink-0">•</span>
+                    <div>
+                      <p className="font-medium">Gorjeta para Guia e Motorista</p>
+                      <p className="text-sm text-gray-600">Valor mínimo por pessoa: R$ 30,00 (não está incluso). Será recolhido no dia da reunião do grupo.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Detalhes Adicionais */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-blue-50 p-8 rounded-lg">
                   <h3 className="font-heading text-xl font-light text-primary mb-4">Hospedagem</h3>
                   <ul className="font-paragraph text-gray-700 space-y-2">
-                    <li>• Hotéis 3 e 4 estrelas</li>
+                    <li>• Hotel Rainha dos Apóstolos</li>
                     <li>• Quartos confortáveis e bem equipados</li>
                     <li>• Café da manhã incluído</li>
                     <li>• Acesso a piscina e academia</li>
@@ -362,8 +427,8 @@ export default function AparecidaCamposJordaoPage() {
                 <div className="bg-blue-50 p-8 rounded-lg">
                   <h3 className="font-heading text-xl font-light text-primary mb-4">Refeições</h3>
                   <ul className="font-paragraph text-gray-700 space-y-2">
-                    <li>• Café da manhã diário</li>
-                    <li>• Jantares incluídos</li>
+                    <li>• 5 cafés da manhã diários</li>
+                    <li>• 4 jantares incluídos</li>
                     <li>• Almoços selecionados</li>
                     <li>• Degustação de vinhos e chocolates</li>
                   </ul>
@@ -374,7 +439,7 @@ export default function AparecidaCamposJordaoPage() {
                   <ul className="font-paragraph text-gray-700 space-y-2">
                     <li>• Passagens aéreas ida e volta</li>
                     <li>• Traslados aeroporto-hotel</li>
-                    <li>• Ônibus climatizado para passeios</li>
+                    <li>• Ônibus ou Micro climatizado</li>
                     <li>• Guia acompanhante em português</li>
                   </ul>
                 </div>
@@ -402,10 +467,10 @@ export default function AparecidaCamposJordaoPage() {
                 <div className="bg-blue-50 p-8 rounded-lg">
                   <h3 className="font-heading text-xl font-light text-primary mb-4">Acompanhamento</h3>
                   <ul className="font-paragraph text-gray-700 space-y-2">
+                    <li>• Coordenador da Alliance com o grupo</li>
                     <li>• Guia especializado</li>
                     <li>• Suporte em português</li>
                     <li>• Atendimento personalizado</li>
-                    <li>• Flexibilidade no roteiro</li>
                   </ul>
                 </div>
               </div>
