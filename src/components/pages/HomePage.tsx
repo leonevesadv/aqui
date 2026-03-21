@@ -4,14 +4,16 @@ import { BaseCrudService } from '@/integrations';
 import { PacotesdeViagem } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
-import { MapPin, Clock, Users, Phone, Mail, Star, Award, Shield, Calendar, Plus } from 'lucide-react';
+import { MapPin, Clock, Users, Phone, Mail, Star, Award, Shield, Calendar, Plus, ChevronLeft, ChevronRight } from 'lucide-react';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
+import { motion, AnimatePresence } from 'framer-motion';
 import Footer from '@/components/Footer';
 
 export default function HomePage() {
   const [featuredPackages, setFeaturedPackages] = useState<PacotesdeViagem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
 
   useEffect(() => {
     const fetchAndUpdatePackages = async () => {
@@ -44,6 +46,33 @@ export default function HomePage() {
     };
 
     fetchAndUpdatePackages();
+  }, []);
+
+  // Auto-advance testimonials every 5 seconds
+  useEffect(() => {
+    const testimonials = [
+      {
+        text: "Viajei para a Terra Santa com a Alliance Viagens em 2016, realizando um sonho muito antigo de conhecer os locais em que Jesus realizou os milagres, transformando a vida das pessoas e trazendo a Boa Notícia de um mundo melhor. Uma viagem magnífica!",
+        name: "Maria de Lourdes",
+        subtitle: "Cliente desde 2016"
+      },
+      {
+        text: "Viajar para Aparecida com a Alliance Viagens foi uma benção para mim, pois sempre quis conhecer o Santuário de Aparecida, mas não sabia planejar a viagem. A Alliance programou toda a viagem com muitos passeios, guias e pontualidade. Adorei conhecer também a Canção Nova e o Santuário de Frei Galvão.",
+        name: "Luciana Freire",
+        subtitle: "Cliente Alliance Viagens"
+      },
+      {
+        text: "Realizei minha peregrinação à Fátima, em Portugal, local de Aparição da Virgem Maria aos três pastorinhos, no ano de 2018 com a Alliance Viagens. Seguindo o roteiro, visitamos também o Vaticano e tive oportunidade de ver de perto o Papa Francisco, na Praça São Pedro. Pretendo agora viajar para a Terra Santa novamente pela Alliance.",
+        name: "Alessandra Tavares",
+        subtitle: "Cliente desde 2018"
+      }
+    ];
+
+    const interval = setInterval(() => {
+      setCurrentTestimonialIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
   if (isLoading) {
@@ -372,83 +401,150 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#ffac00] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* First Testimonial */}
-            <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
-              <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">"</div>
-              <div className="relative z-10">
-                <p className="font-paragraph text-lg md:text-xl leading-relaxed text-gray-700 mb-8 italic">
-                  "Viajei para a Terra Santa com a Alliance Viagens em 2016, realizando um sonho muito antigo de conhecer os locais em que Jesus realizou os milagres, transformando a vida das pessoas e trazendo a Boa Notícia de um mundo melhor. Uma viagem magnífica!"
-                </p>
-                <div className="flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-[#ffac00ff] stroke-[#ffac00]" style={{ strokeWidth: '2px' }} />
-                      ))}
+          <div className="max-w-4xl mx-auto">
+            <div className="relative h-[400px] flex items-center justify-center">
+              <AnimatePresence mode="wait">
+                {currentTestimonialIndex === 0 && (
+                  <motion.div
+                    key="testimonial-0"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="absolute w-full"
+                  >
+                    <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
+                      <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">"</div>
+                      <div className="relative z-10">
+                        <p className="font-paragraph text-lg md:text-xl leading-relaxed text-gray-700 mb-8 italic">
+                          "Viajei para a Terra Santa com a Alliance Viagens em 2016, realizando um sonho muito antigo de conhecer os locais em que Jesus realizou os milagres, transformando a vida das pessoas e trazendo a Boa Notícia de um mundo melhor. Uma viagem magnífica!"
+                        </p>
+                        <div className="flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="flex items-center justify-center mb-2">
+                              {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-5 h-5 fill-[#ffac00ff] stroke-[#ffac00]" style={{ strokeWidth: '2px' }} />
+                              ))}
+                            </div>
+                            <p className="font-heading text-lg font-semibold text-foreground">
+                              Maria de Lourdes
+                            </p>
+                            <p className="font-paragraph text-sm text-gray-500">
+                              Cliente desde 2016
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-6 right-8 text-6xl opacity-20 font-serif rotate-180 bg-[transparent] text-[#ffac00ff]">"</div>
                     </div>
-                    <p className="font-heading text-lg font-semibold text-foreground">
-                      Maria de Lourdes
-                    </p>
-                    <p className="font-paragraph text-sm text-gray-500">
-                      Cliente desde 2016
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute bottom-6 right-8 text-6xl opacity-20 font-serif rotate-180 bg-[transparent] text-[#ffac00ff]">"</div>
+                  </motion.div>
+                )}
+                {currentTestimonialIndex === 1 && (
+                  <motion.div
+                    key="testimonial-1"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="absolute w-full"
+                  >
+                    <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
+                      <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">"</div>
+                      <div className="relative z-10">
+                        <p className="font-paragraph text-lg md:text-xl leading-relaxed text-gray-700 mb-8 italic">
+                          "Viajar para Aparecida com a Alliance Viagens foi uma benção para mim, pois sempre quis conhecer o Santuário de Aparecida, mas não sabia planejar a viagem. A Alliance programou toda a viagem com muitos passeios, guias e pontualidade. Adorei conhecer também a Canção Nova e o Santuário de Frei Galvão."
+                        </p>
+                        <div className="flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="flex items-center justify-center mb-2">
+                              {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-5 h-5 fill-[#ffac00ff] stroke-[#ffac00]" style={{ strokeWidth: '2px' }} />
+                              ))}
+                            </div>
+                            <p className="font-heading text-lg font-semibold text-foreground">
+                              Luciana Freire
+                            </p>
+                            <p className="font-paragraph text-sm text-gray-500">
+                              Cliente Alliance Viagens
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-6 right-8 text-6xl opacity-20 font-serif rotate-180 bg-[transparent] text-[#ffac00ff]">"</div>
+                    </div>
+                  </motion.div>
+                )}
+                {currentTestimonialIndex === 2 && (
+                  <motion.div
+                    key="testimonial-2"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="absolute w-full"
+                  >
+                    <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
+                      <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">"</div>
+                      <div className="relative z-10">
+                        <p className="font-paragraph text-lg md:text-xl leading-relaxed text-gray-700 mb-8 italic">
+                          "Realizei minha peregrinação à Fátima, em Portugal, local de Aparição da Virgem Maria aos três pastorinhos, no ano de 2018 com a Alliance Viagens. Seguindo o roteiro, visitamos também o Vaticano e tive oportunidade de ver de perto o Papa Francisco, na Praça São Pedro. Pretendo agora viajar para a Terra Santa novamente pela Alliance."
+                        </p>
+                        <div className="flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="flex items-center justify-center mb-2">
+                              {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-5 h-5 fill-[#ffac00ff] stroke-[#ffac00]" style={{ strokeWidth: '2px' }} />
+                              ))}
+                            </div>
+                            <p className="font-heading text-lg font-semibold text-foreground">
+                              Alessandra Tavares
+                            </p>
+                            <p className="font-paragraph text-sm text-gray-500">
+                              Cliente desde 2018
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-6 right-8 text-6xl opacity-20 font-serif rotate-180 bg-[transparent] text-[#ffac00ff]">"</div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
-            {/* Second Testimonial */}
-            <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
-              <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">"</div>
-              <div className="relative z-10">
-                <p className="font-paragraph text-lg md:text-xl leading-relaxed text-gray-700 mb-8 italic">
-                  "Viajar para Aparecida com a Alliance Viagens foi uma benção para mim, pois sempre quis conhecer o Santuário de Aparecida, mas não sabia planejar a viagem. A Alliance programou toda a viagem com muitos passeios, guias e pontualidade. Adorei conhecer também a Canção Nova e o Santuário de Frei Galvão."
-                </p>
-                <div className="flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-[#ffac00ff] stroke-[#ffac00]" style={{ strokeWidth: '2px' }} />
-                      ))}
-                    </div>
-                    <p className="font-heading text-lg font-semibold text-foreground">
-                      Luciana Freire
-                    </p>
-                    <p className="font-paragraph text-sm text-gray-500">
-                      Cliente Alliance Viagens
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute bottom-6 right-8 text-6xl opacity-20 font-serif rotate-180 bg-[transparent] text-[#ffac00ff]">"</div>
-            </div>
+            {/* Navigation Controls */}
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <button
+                onClick={() => setCurrentTestimonialIndex((prev) => (prev - 1 + 3) % 3)}
+                className="p-2 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors"
+                aria-label="Depoimento anterior"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
 
-            {/* Third Testimonial - Alessandra Tavares */}
-            <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
-              <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">"</div>
-              <div className="relative z-10">
-                <p className="font-paragraph text-lg md:text-xl leading-relaxed text-gray-700 mb-8 italic">
-                  "Realizei minha peregrinação à Fátima, em Portugal, local de Aparição da Virgem Maria aos três pastorinhos, no ano de 2018 com a Alliance Viagens. Seguindo o roteiro, visitamos também o Vaticano e tive oportunidade de ver de perto o Papa Francisco, na Praça São Pedro. Pretendo agora viajar para a Terra Santa novamente pela Alliance."
-                </p>
-                <div className="flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-[#ffac00ff] stroke-[#ffac00]" style={{ strokeWidth: '2px' }} />
-                      ))}
-                    </div>
-                    <p className="font-heading text-lg font-semibold text-foreground">
-                      Alessandra Tavares
-                    </p>
-                    <p className="font-paragraph text-sm text-gray-500">
-                      Cliente desde 2018
-                    </p>
-                  </div>
-                </div>
+              {/* Dots Indicator */}
+              <div className="flex gap-2">
+                {[0, 1, 2].map((index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTestimonialIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      index === currentTestimonialIndex
+                        ? 'bg-[#ffac00] w-8'
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                    aria-label={`Ir para depoimento ${index + 1}`}
+                  />
+                ))}
               </div>
-              <div className="absolute bottom-6 right-8 text-6xl opacity-20 font-serif rotate-180 bg-[transparent] text-[#ffac00ff]">"</div>
+
+              <button
+                onClick={() => setCurrentTestimonialIndex((prev) => (prev + 1) % 3)}
+                className="p-2 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors"
+                aria-label="Próximo depoimento"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
             </div>
           </div>
         </div>
