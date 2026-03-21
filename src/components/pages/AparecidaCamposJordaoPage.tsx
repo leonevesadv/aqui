@@ -482,13 +482,13 @@ export default function AparecidaCamposJordaoPage() {
                 <div className="flex items-start gap-4 mb-6">
                   <Plane className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-heading text-2xl font-light text-primary mb-2">Informações de Voo</h3>
+                    <h3 className="font-heading text-2xl font-light text-primary mb-2">Voos Confirmados</h3>
                     <p className="font-paragraph text-gray-700">Detalhes completos sobre seus voos de ida e volta</p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                  <div className="border-l-4 border-primary pl-6">
+                  <div className="border-l-4 border-primary pl-6 bg-white p-6 rounded-r-lg">
                     <h4 className="font-heading text-lg font-light text-primary mb-4">Voo de Ida</h4>
                     <div className="space-y-3 font-paragraph text-gray-700">
                       <div>
@@ -496,21 +496,25 @@ export default function AparecidaCamposJordaoPage() {
                         <p className="font-medium">27 de Março de 2026</p>
                       </div>
                       <div>
+                        <p className="text-sm text-gray-500">Companhia Aérea</p>
+                        <p className="font-medium text-accent">LATAM</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500">Rota</p>
+                        <p className="font-medium">Fortaleza (FOR) → Guarulhos (GRU)</p>
+                      </div>
+                      <div>
                         <p className="text-sm text-gray-500">Saída</p>
-                        <p className="font-medium">Fortaleza (FOR) - Horário a confirmar</p>
+                        <p className="font-medium text-lg">04:40</p>
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">Chegada</p>
-                        <p className="font-medium">São Paulo/Guarulhos (GRU)</p>
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-500">Companhia Aérea</p>
-                        <p className="font-medium">A confirmar</p>
+                        <p className="font-medium text-lg">08:15</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="border-l-4 border-primary pl-6">
+                  <div className="border-l-4 border-primary pl-6 bg-white p-6 rounded-r-lg">
                     <h4 className="font-heading text-lg font-light text-primary mb-4">Voo de Retorno</h4>
                     <div className="space-y-3 font-paragraph text-gray-700">
                       <div>
@@ -518,16 +522,20 @@ export default function AparecidaCamposJordaoPage() {
                         <p className="font-medium">31 de Março de 2026</p>
                       </div>
                       <div>
+                        <p className="text-sm text-gray-500">Companhia Aérea</p>
+                        <p className="font-medium text-accent">LATAM</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500">Rota</p>
+                        <p className="font-medium">Guarulhos (GRU) → Fortaleza (FOR)</p>
+                      </div>
+                      <div>
                         <p className="text-sm text-gray-500">Saída</p>
-                        <p className="font-medium">São Paulo/Guarulhos (GRU) - Horário a confirmar</p>
+                        <p className="font-medium text-lg">15:25</p>
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">Chegada</p>
-                        <p className="font-medium">Fortaleza (FOR)</p>
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-500">Companhia Aérea</p>
-                        <p className="font-medium">A confirmar</p>
+                        <p className="font-medium text-lg">18:50</p>
                       </div>
                     </div>
                   </div>
