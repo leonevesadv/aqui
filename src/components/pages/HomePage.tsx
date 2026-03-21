@@ -220,7 +220,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover"
                     width={400}
                   />
-                  <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 right-4 bg-[#ffac00] text-white px-3 py-1 rounded-full text-sm font-medium">
                     Oferta Especial
                   </div>
                 </div>
