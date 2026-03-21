@@ -7,6 +7,7 @@ import PackagesPage from '@/components/pages/PackagesPage';
 import PackageDetailPage from '@/components/pages/PackageDetailPage';
 import AboutPage from '@/components/pages/AboutPage';
 import ContactPage from '@/components/pages/ContactPage';
+import AparecidaCamposJordaoPage from '@/components/pages/AparecidaCamposJordaoPage';
 
 // Layout component that includes ScrollToTop
 function Layout() {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "aparecida-campos-jordao",
+        element: <AparecidaCamposJordaoPage />,
       },
       {
         path: "*",
