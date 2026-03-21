@@ -134,8 +134,8 @@ export default function HomePage() {
                   <span className="font-paragraph text-base font-medium">Viagens com diretor espiritual</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <Award className="w-5 h-5 text-[#ffac00]" />
-                  <span className="font-paragraph text-base font-medium">Viagens com diretor espiritual</span>
+                  <Shield className="w-5 h-5 text-[#ffac00]" />
+                  <span className="font-paragraph text-base font-medium">Segurança e confiança garantidas</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
