@@ -258,7 +258,7 @@ export default function HomePage() {
               </div>
             ))}
             {/* Aparecida e Campos do Jordão Card */}
-            <a href="https://www.allianceviagens.com/aparecida-campos-do-jord%C3%A3o" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 block">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="relative h-64">
                 <Image
                   src="https://static.wixstatic.com/media/e4152c_9bace95b26054372b0838eb49b98856a~mv2.png?originWidth=384&originHeight=384"
@@ -292,12 +292,12 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="flex justify-end">
-                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                    Ver Detalhes
+                  <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    <Link to="/aparecida-campos-jordao">Ver Detalhes</Link>
                   </Button>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
 
           <div className="text-center mt-12">
