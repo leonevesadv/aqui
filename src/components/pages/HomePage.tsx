@@ -286,6 +286,10 @@ export default function HomePage() {
                     <Clock className="w-4 h-4 mr-2 text-primary" />
                     <span className="font-paragraph">3 a 4 dias</span>
                   </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Calendar className="w-4 h-4 mr-2 text-primary" />
+                    <span className="font-paragraph">27 a 31 de março de 2026</span>
+                  </div>
                 </div>
                 <div className="flex justify-end">
                   <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
