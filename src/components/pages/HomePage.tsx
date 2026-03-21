@@ -111,12 +111,12 @@ export default function HomePage() {
             <div className="space-y-6">
               <div className="flex items-center space-x-2 text-accent">
                 <Star className="w-5 h-5 fill-[#ffac00] stroke-[#ffac00]" />
-                <span className="font-paragraph text-lg font-medium text-[#ffac00]">Mais de 20 anos de experiência</span>
+                <span className="font-paragraph text-lg font-medium text-[#ffac00ff]">Mais de 20 anos de experiência</span>
               </div>
               <h1 className="font-heading text-5xl md:text-7xl font-bold leading-tight">
                 Realize seus
                 <br />
-                <span className="text-[#ffac00]">sonhos de viagem</span>
+                <span className="text-[#ffac00ff]">sonhos de viagem</span>
               </h1>
               <p className="font-paragraph text-xl leading-relaxed opacity-90 max-w-2xl">
                 Na Alliance Viagens, transformamos seus sonhos em realidade. Especializados em turismo religioso 
@@ -136,7 +136,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 text-lg">
-                  <a href="#pacotes" className="bg-[#ffac00]">Explorar Destinos</a>
+                  <a href="#pacotes" className="bg-[#ffac00ff]">Explorar Destinos</a>
                 </Button>
                 <Button variant="outline" asChild size="lg" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg">
                   <Link to="/contact">Solicitar Orçamento</Link>
