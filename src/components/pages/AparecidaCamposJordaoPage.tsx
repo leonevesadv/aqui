@@ -226,6 +226,117 @@ export default function AparecidaCamposJordaoPage() {
         </div>
       </section>
 
+      {/* Itinerary Section */}
+      <section className="w-full py-16 bg-white">
+        <div className="max-w-[120rem] mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-4xl font-light mb-4">Roteiro Detalhado</h2>
+            <p className="font-paragraph text-gray-600 max-w-2xl mx-auto">
+              Conheça dia a dia o que você viverá nesta jornada espiritual e natural
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {/* Day 1 */}
+            <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="font-heading text-2xl font-light text-primary mb-2">1º DIA - 27/03/2026</h3>
+                  <p className="font-paragraph text-lg font-medium text-gray-800">Fortaleza | Guarulhos | Campos do Jordão</p>
+                </div>
+              </div>
+              <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
+                <p>
+                  Encontro no aeroporto, conforme horário previamente indicado, para embarque com destino a Guarulhos. 
+                  Chegada e continuação da viagem para Campos do Jordão.
+                </p>
+                <p>
+                  City tour guiado pelos principais pontos turísticos. Check-in, jantar incluído e noite livre.
+                </p>
+              </div>
+            </div>
+
+            {/* Day 2 */}
+            <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="font-heading text-2xl font-light text-primary mb-2">2º DIA - 28/03/2026</h3>
+                  <p className="font-paragraph text-lg font-medium text-gray-800">Campos do Jordão | Aparecida</p>
+                </div>
+              </div>
+              <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
+                <p>
+                  Café da manhã no hotel. Manhã livre, com opção de passeio de trenzinho.
+                </p>
+                <p>
+                  Visita incluída a uma loja de vinhos e chocolates para degustação. Tempo livre para almoço (não incluso).
+                </p>
+                <p>
+                  À tarde, viagem com destino a Aparecida. Check-in, hospedagem e jantar.
+                </p>
+              </div>
+            </div>
+
+            {/* Day 3 */}
+            <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="font-heading text-2xl font-light text-primary mb-2">3º DIA - 29/03/2026</h3>
+                  <p className="font-paragraph text-lg font-medium text-gray-800">Aparecida | Canção Nova (Domingo de Ramos)</p>
+                </div>
+              </div>
+              <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
+                <p>
+                  Após o café da manhã, saída para Guaratinguetá, onde visitaremos a Casa e o Museu de Frei Galvão.
+                </p>
+                <p>
+                  Em seguida, continuação até a Canção Nova, com participação na Santa Missa no Santuário do Pai das Misericórdias.
+                </p>
+                <p>
+                  Tempo livre para possível participação na palestra do Frei Gilson (a confirmar). Retorno a Aparecida, hospedagem e jantar incluído.
+                </p>
+              </div>
+            </div>
+
+            {/* Day 4 */}
+            <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="font-heading text-2xl font-light text-primary mb-2">4º DIA - 30/03/2026</h3>
+                  <p className="font-paragraph text-lg font-medium text-gray-800">Aparecida (Visitas Devocionais)</p>
+                </div>
+              </div>
+              <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
+                <p>
+                  Café da manhã. Visita guiada às Basílicas e a todo o complexo do Santuário Nacional.
+                </p>
+                <p>
+                  Tempo livre para passeios opcionais, como a subida ao Mirante da Torre ou o passeio de bondinho até o Morro do Cruzeiro.
+                </p>
+                <p>
+                  À tarde, faremos o Caminho do Rosário. Jantar e hospedagem.
+                </p>
+              </div>
+            </div>
+
+            {/* Day 5 */}
+            <div className="border-l-4 border-primary pl-8 py-6 bg-blue-50 rounded-r-lg p-8">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="font-heading text-2xl font-light text-primary mb-2">5º DIA - 31/03/2026</h3>
+                  <p className="font-paragraph text-lg font-medium text-gray-800">Aparecida | Fortaleza</p>
+                </div>
+              </div>
+              <div className="font-paragraph text-gray-700 space-y-3 leading-relaxed">
+                <p>
+                  Café da manhã. No horário a ser informado, check-out no hotel e traslado ao aeroporto de Guarulhos para embarque de retorno a Fortaleza.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Attractions Section */}
       <section className="w-full py-16 bg-white">
         <div className="max-w-[120rem] mx-auto px-6">
