@@ -648,6 +648,35 @@ export default function AparecidaCamposJordaoPage() {
                     <li>• Gorjetas e taxas adicionais</li>
                   </ul>
                 </div>
+
+                <div className="mt-8 p-8 rounded-lg bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary">
+                  <h3 className="font-heading text-2xl font-light text-primary mb-6">INVESTIMENTOS</h3>
+                  <div className="space-y-6">
+                    <div className="bg-white p-6 rounded-lg border-l-4 border-primary">
+                      <div className="flex justify-between items-center">
+                        <div>
+                          <p className="font-paragraph text-gray-600 mb-2">Preço por pessoa para compartilhar</p>
+                          <h4 className="font-heading text-xl font-light text-primary">Apartamento Duplo</h4>
+                        </div>
+                        <div className="text-right">
+                          <p className="font-heading text-3xl font-light text-primary">R$ 3.880</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-6 rounded-lg border-l-4 border-accent">
+                      <div className="flex justify-between items-center">
+                        <div>
+                          <p className="font-paragraph text-gray-600 mb-2">Suplemento para</p>
+                          <h4 className="font-heading text-xl font-light text-accent">Apartamento Individual</h4>
+                        </div>
+                        <div className="text-right">
+                          <p className="font-heading text-3xl font-light text-accent">R$ 850</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </TabsContent>
 
