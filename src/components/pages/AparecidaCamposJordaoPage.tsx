@@ -162,7 +162,7 @@ export default function AparecidaCamposJordaoPage() {
 
             {/* Highlight 2 */}
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full mb-4">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
                 <Mountain className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-heading text-xl font-light mb-3">Campos do Jordão</h3>
@@ -186,7 +186,7 @@ export default function AparecidaCamposJordaoPage() {
 
             {/* Highlight 4 */}
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full mb-4">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-heading text-xl font-light mb-3">Experiência Espiritual</h3>
@@ -210,7 +210,7 @@ export default function AparecidaCamposJordaoPage() {
 
             {/* Highlight 6 */}
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full mb-4">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-heading text-xl font-light mb-3">Comunidade Acolhedora</h3>
@@ -983,7 +983,7 @@ export default function AparecidaCamposJordaoPage() {
               Entre em contato conosco para conhecer nossos pacotes especiais para Aparecida e Campos do Jordão
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-primary hover:bg-gray-100">
+              <Button className="hover:bg-gray-100 bg-accent text-primary-foreground">
                 <Phone className="w-4 h-4 mr-2" />
                 Ligar Agora
               </Button>
