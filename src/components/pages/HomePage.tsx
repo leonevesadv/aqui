@@ -134,8 +134,8 @@ export default function HomePage() {
                   <span className="font-paragraph text-base font-medium">Viagens com diretor espiritual</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <Shield className="w-5 h-5 text-[#ffac00]" />
-                  <span className="font-paragraph text-base font-medium">Segurança e confiança garantidas</span>
+                  <Award className="w-5 h-5 text-[#ffac00]" />
+                  <span className="font-paragraph text-base font-medium">Viagens com diretor espiritual</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -187,18 +187,10 @@ export default function HomePage() {
             </div>
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-heading text-2xl font-semibold text-foreground">
-                Diretor Espiritual
-              </h3>
-              <p className="font-paragraph text-gray-600">
-                Acompanhamento de diretor espiritual especializado para enriquecer sua jornada de fé.
-              </p>
-            </div>
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
-                <Shield className="w-8 h-8 text-white" />
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="12" y1="2" x2="12" y2="22" />
+                  <line x1="5" y1="9" x2="19" y2="9" />
+                </svg>
               </div>
               <h3 className="font-heading text-2xl font-semibold text-foreground">
                 Diretor Espiritual
@@ -378,7 +370,7 @@ export default function HomePage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
-              <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">"</div>
+              <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">\"</div>
               <div className="relative z-10">
                 <p className="font-paragraph text-lg md:text-xl leading-relaxed text-gray-700 mb-8 italic">
                   "Viajei para a Terra Santa com a Alliance Viagens em 2016, realizando um sonho muito antigo de conhecer os locais em que Jesus realizou os milagres, transformando a vida das pessoas e trazendo a Boa Notícia de um mundo melhor. Uma viagem magnífica!"
@@ -399,7 +391,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="absolute bottom-6 right-8 text-6xl opacity-20 font-serif rotate-180 bg-[transparent] text-[#ffac00ff]">"</div>
+              <div className="absolute bottom-6 right-8 text-6xl opacity-20 font-serif rotate-180 bg-[transparent] text-[#ffac00ff]">\"</div>
             </div>
           </div>
         </div>
