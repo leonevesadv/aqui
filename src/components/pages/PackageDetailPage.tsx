@@ -65,7 +65,7 @@ export default function PackageDetailPage() {
 
   // Group itinerary items by day
   const groupedItinerary = itineraryItems.reduce((acc, item) => {
-    const isDayHeader = item.trim().match(/^\d+º\s+DIA/i);
+    const isDayHeader = item.trim().match(/^\\d+º\\s+DIA/i);
     
     if (isDayHeader) {
       acc.push({
