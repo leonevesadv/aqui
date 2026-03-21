@@ -133,6 +133,10 @@ export default function HomePage() {
                   <Award className="w-5 h-5 text-[#ffac00]" />
                   <span className="font-paragraph text-base font-medium">Viagens com diretor espiritual</span>
                 </div>
+                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <Award className="w-5 h-5 text-[#ffac00]" />
+                  <span className="font-paragraph text-base font-medium">Viagens com diretor espiritual</span>
+                </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild size="lg" className="bg-[#ffac00] text-white hover:bg-[#ffc92b] px-8 py-4 text-lg">
@@ -183,7 +187,10 @@ export default function HomePage() {
             </div>
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
-                <Award className="w-8 h-8 text-white" />
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="12" y1="2" x2="12" y2="22" />
+                  <line x1="5" y1="9" x2="19" y2="9" />
+                </svg>
               </div>
               <h3 className="font-heading text-2xl font-semibold text-foreground">
                 Diretor Espiritual
