@@ -187,10 +187,7 @@ export default function HomePage() {
             </div>
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
-                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="12" y1="2" x2="12" y2="22" />
-                  <line x1="5" y1="9" x2="19" y2="9" />
-                </svg>
+                <Award className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-heading text-2xl font-semibold text-foreground">
                 Diretor Espiritual
