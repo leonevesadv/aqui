@@ -325,7 +325,7 @@ export default function HomePage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-secondary rounded-2xl p-8 md:p-12 shadow-lg relative">
-              <div className="absolute top-6 left-8 text-6xl text-accent opacity-20 font-serif">\"</div>
+              <div className="absolute top-6 left-8 text-6xl opacity-20 font-serif text-[#ffac00ff]">\"</div>
               <div className="relative z-10">
                 <p className="font-paragraph text-lg md:text-xl leading-relaxed text-gray-700 mb-8 italic">
                   "Viajei para a Terra Santa com a Alliance Viagens em 2016, realizando um sonho muito antigo de conhecer os locais em que Jesus realizou os milagres, transformando a vida das pessoas e trazendo a Boa Notícia de um mundo melhor. Uma viagem magnífica!"
