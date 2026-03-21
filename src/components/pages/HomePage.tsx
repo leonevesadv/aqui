@@ -135,7 +135,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button asChild size="lg" className="bg-[#ffac00] text-white hover:bg-[#ffac00] px-8 py-4 text-lg">
+                <Button asChild size="lg" className="bg-[#ffac00] text-white hover:bg-[#ffc92b] px-8 py-4 text-lg">
                   <a href="#pacotes">Explorar Destinos</a>
                 </Button>
                 <Button variant="outline" asChild size="lg" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg">
