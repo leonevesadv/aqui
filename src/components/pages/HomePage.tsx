@@ -128,12 +128,12 @@ export default function HomePage() {
       <section className="relative w-full h-[80vh] min-h-[600px] overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://static.wixstatic.com/media/e4152c_02c111d5537e47eba9057926ee6ed743~mv2.jpg"
-            alt="Muro das Lamentações e Cúpula da Rocha em Jerusalém - Destino sagrado para turismo religioso"
+            src="https://static.wixstatic.com/media/e4152c_0ebd05465c944d6094cd9a82407a2ca5~mv2.png?originWidth=1920&originHeight=1024"
+            alt="Destino de viagem luxuoso - Jornada espiritual premium com tons azuis vibrantes"
             className="w-full h-full object-cover"
             width={1920}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/85 to-primary/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/70 to-blue-700/50"></div>
         </div>
         
         <div className="relative z-10 max-w-[120rem] mx-auto px-6 h-full flex items-center">
