@@ -117,12 +117,12 @@ export default function AparecidaCamposJordaoPage() {
           </div>
 
           <Tabs defaultValue="roteiro" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8 bg-primary p-1 rounded-lg">
-              <TabsTrigger value="roteiro" className="font-paragraph font-semibold text-sm data-[state=active]:bg-white data-[state=active]:text-primary data-[state=inactive]:text-white">Roteiro</TabsTrigger>
-              <TabsTrigger value="servicos" className="font-paragraph font-semibold text-sm data-[state=active]:bg-white data-[state=active]:text-primary data-[state=inactive]:text-white">Serviços</TabsTrigger>
-              <TabsTrigger value="aereo" className="font-paragraph font-semibold text-sm data-[state=active]:bg-white data-[state=active]:text-primary data-[state=inactive]:text-white">Aéreo</TabsTrigger>
-              <TabsTrigger value="valores" className="font-paragraph font-semibold text-sm data-[state=active]:bg-white data-[state=active]:text-primary data-[state=inactive]:text-white">Valores</TabsTrigger>
-              <TabsTrigger value="documentos" className="font-paragraph font-semibold text-sm data-[state=active]:bg-white data-[state=active]:text-primary data-[state=inactive]:text-white">Documentos</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8 bg-secondary">
+              <TabsTrigger value="roteiro" className="font-paragraph">Roteiro</TabsTrigger>
+              <TabsTrigger value="servicos" className="font-paragraph">Serviços</TabsTrigger>
+              <TabsTrigger value="aereo" className="font-paragraph">Aéreo</TabsTrigger>
+              <TabsTrigger value="valores" className="font-paragraph">Valores</TabsTrigger>
+              <TabsTrigger value="documentos" className="font-paragraph">Documentos</TabsTrigger>
             </TabsList>
 
             {/* Roteiro Tab */}
