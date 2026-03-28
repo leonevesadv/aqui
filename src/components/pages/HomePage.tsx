@@ -161,7 +161,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
                   <Award className="w-5 h-5 text-[#ffac00]" />
-                  <span className="font-paragraph text-base font-medium">Viagens com diretor espiritual</span>
+                  <span className="font-paragraph text-base font-medium">Experiência comprovada</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
                   <svg className="w-5 h-5 text-[#ffac00]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
