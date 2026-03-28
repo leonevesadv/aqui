@@ -118,11 +118,11 @@ export default function AparecidaCamposJordaoPage() {
 
           <Tabs defaultValue="roteiro" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8 bg-secondary">
-              <TabsTrigger value="roteiro" className="font-paragraph">Roteiro</TabsTrigger>
-              <TabsTrigger value="servicos" className="font-paragraph">Serviços</TabsTrigger>
-              <TabsTrigger value="aereo" className="font-paragraph">Aéreo</TabsTrigger>
-              <TabsTrigger value="valores" className="font-paragraph">Valores</TabsTrigger>
-              <TabsTrigger value="documentos" className="font-paragraph">Documentos</TabsTrigger>
+              <TabsTrigger value="roteiro" className="font-paragraph font-bold">Roteiro</TabsTrigger>
+              <TabsTrigger value="servicos" className="font-paragraph font-bold">Serviços</TabsTrigger>
+              <TabsTrigger value="aereo" className="font-paragraph font-bold">Aéreo</TabsTrigger>
+              <TabsTrigger value="valores" className="font-paragraph font-bold">Valores</TabsTrigger>
+              <TabsTrigger value="documentos" className="font-paragraph font-bold">Documentos</TabsTrigger>
             </TabsList>
 
             {/* Roteiro Tab */}
