@@ -23,23 +23,23 @@ export default {
                 paragraph: "cormorantgaramond-light"
             },
             colors: {
-                // Cores baseadas na logomarca Alliance - Tonalidade melhorada
-                footerbackground: '#0f2d5c', // Azul escuro mais profundo e elegante
-                foreground: '#0f2d5c', // Azul escuro para textos principais
+                // Cores baseadas na logomarca Alliance
+                footerbackground: '#1e3a8a', // Azul escuro da Alliance
+                foreground: '#1e3a8a', // Azul escuro para textos principais
                 background: '#FFFFFF',
-                secondary: '#e8f2ff', // Azul muito claro, mais refinado
-                'secondary-foreground': '#0f2d5c',
+                secondary: '#f0f9ff', // Azul muito claro para fundos secundários
+                'secondary-foreground': '#1e3a8a',
                 'primary-foreground': '#FFFFFF',
-                primary: '#1e5ba8', // Azul principal mais vibrante e sofisticado
+                primary: '#2563eb', // Azul principal da Alliance
                 accent: '#ffac00', // Laranja vibrante da Alliance
                 'accent-foreground': '#FFFFFF',
                 // Cores adicionais para maior flexibilidade
-                'blue-50': '#e8f2ff',
-                'blue-100': '#d0e5ff',
-                'blue-600': '#1e5ba8',
-                'blue-700': '#1a4a8a',
-                'blue-800': '#0f2d5c',
-                'blue-900': '#081a38',
+                'blue-50': '#eff6ff',
+                'blue-100': '#dbeafe',
+                'blue-600': '#2563eb',
+                'blue-700': '#1d4ed8',
+                'blue-800': '#1e40af',
+                'blue-900': '#1e3a8a',
                 'orange-50': '#fff7ed',
                 'orange-100': '#ffedd5',
                 'orange-500': '#f97316',
