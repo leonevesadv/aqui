@@ -109,123 +109,6 @@ export default function AparecidaCamposJordaoPage() {
       {/* About Section */}
       <section className="w-full py-16 bg-white">
         <div className="max-w-[120rem] mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="font-heading text-4xl font-light">Sobre o Destino</h2>
-              <div className="space-y-4 font-paragraph text-gray-700 leading-relaxed">
-                <p>
-                  Aparecida e Campos do Jordão formam um destino único que combina espiritualidade, natureza e cultura. 
-                  Aparecida é o coração religioso do Brasil, enquanto Campos do Jordão oferece paisagens montanhosas de tirar o fôlego.
-                </p>
-                <p>
-                  Este destino é perfeito para quem busca uma experiência transformadora, conectando-se com a fé, a natureza 
-                  e a cultura brasileira em um único lugar.
-                </p>
-                <p>
-                  A região oferece uma combinação perfeita de momentos de reflexão espiritual com atividades ao ar livre, 
-                  gastronomia local e hospitalidade calorosa.
-                </p>
-              </div>
-            </div>
-            <div className="relative h-[400px]">
-              <Image
-                src="https://static.wixstatic.com/media/e4152c_048c724778ef45929462c9c9052802e5~mv2.png?originWidth=576&originHeight=384"
-                alt="Paisagem de Campos do Jordão"
-                className="w-full h-full object-cover rounded-lg"
-                width={600}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Highlights Section */}
-      <section className="w-full py-16 bg-secondary">
-        <div className="max-w-[120rem] mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl font-light mb-4">Destaques do Destino</h2>
-            <p className="font-paragraph text-gray-600 max-w-2xl mx-auto">
-              Descubra os principais pontos de interesse e experiências que tornam este destino especial
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Highlight 1 */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full mb-4">
-                <Church className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-heading text-xl font-light mb-3">Basílica de Aparecida</h3>
-              <p className="font-paragraph text-gray-600 leading-relaxed">
-                Um dos maiores templos católicos do mundo, local de peregrinação e devoção. 
-                Experiência espiritual profunda e arquitetura impressionante.
-              </p>
-            </div>
-
-            {/* Highlight 2 */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
-                <Mountain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-heading text-xl font-light mb-3">Campos do Jordão</h3>
-              <p className="font-paragraph text-gray-600 leading-relaxed">
-                Estância climática com paisagens montanhosas deslumbrantes. Perfeita para caminhadas, 
-                piqueniques e contemplação da natureza.
-              </p>
-            </div>
-
-            {/* Highlight 3 */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-primary">
-                <Leaf className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-heading text-xl font-light mb-3">Natureza Preservada</h3>
-              <p className="font-paragraph text-gray-600 leading-relaxed">
-                Florestas exuberantes, trilhas ecológicas e paisagens selvagens. 
-                Ideal para reconexão com a natureza e bem-estar.
-              </p>
-            </div>
-
-            {/* Highlight 4 */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
-                <Heart className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-heading text-xl font-light mb-3">Experiência Espiritual</h3>
-              <p className="font-paragraph text-gray-600 leading-relaxed">
-                Momentos de reflexão, meditação e conexão espiritual. 
-                Ambiente propício para renovação da fé e paz interior.
-              </p>
-            </div>
-
-            {/* Highlight 5 */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full mb-4">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-heading text-xl font-light mb-3">Atividades Variadas</h3>
-              <p className="font-paragraph text-gray-600 leading-relaxed">
-                Caminhadas, passeios de teleférico, visitas culturais e gastronomia local. 
-                Experiências para todos os gostos.
-              </p>
-            </div>
-
-            {/* Highlight 6 */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-heading text-xl font-light mb-3">Comunidade Acolhedora</h3>
-              <p className="font-paragraph text-gray-600 leading-relaxed">
-                Povo caloroso e hospitaleiro. Oportunidades para conhecer a cultura local 
-                e fazer amizades significativas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Tabs Section */}
-      <section className="w-full py-16 bg-white">
-        <div className="max-w-[120rem] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="font-heading text-4xl font-light mb-4">Informações do Destino</h2>
             <p className="font-paragraph text-gray-600 max-w-2xl mx-auto">
@@ -803,6 +686,123 @@ export default function AparecidaCamposJordaoPage() {
           </Tabs>
         </div>
       </section>
+      <section className="w-full py-16 bg-white">
+        <div className="max-w-[120rem] mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="font-heading text-4xl font-light">Sobre o Destino</h2>
+              <div className="space-y-4 font-paragraph text-gray-700 leading-relaxed">
+                <p>
+                  Aparecida e Campos do Jordão formam um destino único que combina espiritualidade, natureza e cultura. 
+                  Aparecida é o coração religioso do Brasil, enquanto Campos do Jordão oferece paisagens montanhosas de tirar o fôlego.
+                </p>
+                <p>
+                  Este destino é perfeito para quem busca uma experiência transformadora, conectando-se com a fé, a natureza 
+                  e a cultura brasileira em um único lugar.
+                </p>
+                <p>
+                  A região oferece uma combinação perfeita de momentos de reflexão espiritual com atividades ao ar livre, 
+                  gastronomia local e hospitalidade calorosa.
+                </p>
+              </div>
+            </div>
+            <div className="relative h-[400px]">
+              <Image
+                src="https://static.wixstatic.com/media/e4152c_048c724778ef45929462c9c9052802e5~mv2.png?originWidth=576&originHeight=384"
+                alt="Paisagem de Campos do Jordão"
+                className="w-full h-full object-cover rounded-lg"
+                width={600}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Highlights Section */}
+      <section className="w-full py-16 bg-secondary">
+        <div className="max-w-[120rem] mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-4xl font-light mb-4">Destaques do Destino</h2>
+            <p className="font-paragraph text-gray-600 max-w-2xl mx-auto">
+              Descubra os principais pontos de interesse e experiências que tornam este destino especial
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Highlight 1 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full mb-4">
+                <Church className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-heading text-xl font-light mb-3">Basílica de Aparecida</h3>
+              <p className="font-paragraph text-gray-600 leading-relaxed">
+                Um dos maiores templos católicos do mundo, local de peregrinação e devoção. 
+                Experiência espiritual profunda e arquitetura impressionante.
+              </p>
+            </div>
+
+            {/* Highlight 2 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
+                <Mountain className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-heading text-xl font-light mb-3">Campos do Jordão</h3>
+              <p className="font-paragraph text-gray-600 leading-relaxed">
+                Estância climática com paisagens montanhosas deslumbrantes. Perfeita para caminhadas, 
+                piqueniques e contemplação da natureza.
+              </p>
+            </div>
+
+            {/* Highlight 3 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-primary">
+                <Leaf className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-heading text-xl font-light mb-3">Natureza Preservada</h3>
+              <p className="font-paragraph text-gray-600 leading-relaxed">
+                Florestas exuberantes, trilhas ecológicas e paisagens selvagens. 
+                Ideal para reconexão com a natureza e bem-estar.
+              </p>
+            </div>
+
+            {/* Highlight 4 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
+                <Heart className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-heading text-xl font-light mb-3">Experiência Espiritual</h3>
+              <p className="font-paragraph text-gray-600 leading-relaxed">
+                Momentos de reflexão, meditação e conexão espiritual. 
+                Ambiente propício para renovação da fé e paz interior.
+              </p>
+            </div>
+
+            {/* Highlight 5 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full mb-4">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-heading text-xl font-light mb-3">Atividades Variadas</h3>
+              <p className="font-paragraph text-gray-600 leading-relaxed">
+                Caminhadas, passeios de teleférico, visitas culturais e gastronomia local. 
+                Experiências para todos os gostos.
+              </p>
+            </div>
+
+            {/* Highlight 6 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-accent">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-heading text-xl font-light mb-3">Comunidade Acolhedora</h3>
+              <p className="font-paragraph text-gray-600 leading-relaxed">
+                Povo caloroso e hospitaleiro. Oportunidades para conhecer a cultura local 
+                e fazer amizades significativas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Tabs Section */}
       {/* Attractions Section */}
       <section className="w-full py-16 bg-white">
         <div className="max-w-[120rem] mx-auto px-6">
