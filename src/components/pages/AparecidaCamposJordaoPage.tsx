@@ -52,7 +52,7 @@ export default function AparecidaCamposJordaoPage() {
             {/* Image */}
             <div className="relative h-[400px] lg:h-[600px]">
               <Image
-                src="https://static.wixstatic.com/media/e4152c_b6b8327fa06b4a6b98113b9571da7b38~mv2.png?originWidth=768&originHeight=576"
+                src="https://static.wixstatic.com/media/e4152c_b8ca6606d19147f8baf773ad3045be08~mv2.jpg"
                 alt="Aparecida e Campos do Jordão"
                 className="w-full h-full object-cover"
                 width={800}
