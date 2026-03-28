@@ -298,7 +298,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="relative h-64">
                 <Image
-                  src="https://static.wixstatic.com/media/e4152c_9bace95b26054372b0838eb49b98856a~mv2.png?originWidth=384&originHeight=384"
+                  src="https://static.wixstatic.com/media/e4152c_b17b72898e3b452084309bf858d8e14e~mv2.jpg"
                   alt="Aparecida e Campos do Jordão"
                   className="w-full h-full object-cover"
                   width={400}
