@@ -382,7 +382,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-[500px] rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="https://static.wixstatic.com/media/e4152c_5dfa2b9b9371443dac9063dc8e8c7750~mv2.png?originWidth=576&originHeight=448"
+                src="https://static.wixstatic.com/media/e4152c_6f1bbf9fc56f4fa3929ff3fcb30af9ef~mv2.png"
                 alt="Equipe Alliance Viagens"
                 className="w-full h-full object-cover"
                 width={600}
