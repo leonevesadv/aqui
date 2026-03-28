@@ -96,7 +96,7 @@ export default function AparecidaCamposJordaoPage() {
                 </div>
 
                 <div className="border-t border-gray-200 pt-6">
-                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
+                  <Button className="text-primary-foreground hover:bg-primary/90 w-full bg-primary">
                     <Phone className="w-4 h-4 mr-2" />
                     Solicitar Informações
                   </Button>
