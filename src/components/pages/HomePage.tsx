@@ -128,7 +128,7 @@ export default function HomePage() {
       <section className="relative w-full h-[80vh] min-h-[600px] overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://static.wixstatic.com/media/e4152c_0ebd05465c944d6094cd9a82407a2ca5~mv2.png?originWidth=1920&originHeight=1024"
+            src="https://static.wixstatic.com/media/e4152c_2e8a24e85e9d4b6b9613b91137efa489~mv2.png?originWidth=1920&originHeight=1024"
             alt="Destino de viagem luxuoso - Jornada espiritual premium com tons azuis vibrantes"
             className="w-full h-full object-cover"
             width={1920}
