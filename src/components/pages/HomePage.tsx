@@ -187,12 +187,8 @@ export default function HomePage() {
       <section id="pacotes" className="w-full py-20 bg-secondary">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Destinos em Destaque
-            </h2>
-            <p className="font-paragraph text-xl text-gray-600 max-w-3xl mx-auto">
-              Descubra nossos pacotes mais procurados e embarque na viagem dos seus sonhos
-            </p>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">Destinos</h2>
+            <p className="font-paragraph text-xl text-gray-600 max-w-3xl mx-auto">Descubra nossos pacotes e embarque na viagem dos seus sonhos</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -372,7 +368,7 @@ export default function HomePage() {
                   <p className="font-paragraph text-gray-600">Destinos Únicos</p>
                 </div>
                 <div className="text-center">
-                  <div className="font-heading text-3xl font-bold text-primary mb-2">20+</div>
+                  <div className="font-heading text-3xl font-bold text-primary mb-2">20</div>
                   <p className="font-paragraph text-gray-600">Anos de Experiência</p>
                 </div>
               </div>
