@@ -184,58 +184,6 @@ export default function HomePage() {
         </div>
       </section>
       {/* Why Choose Us Section */}
-      <section className="w-full bg-secondary p-0 py-20 px-0">
-        <div className="max-w-[120rem] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Por que escolher a Alliance?
-            </h2>
-            <p className="font-paragraph text-xl text-gray-600 max-w-3xl mx-auto">
-              Somos especialistas em criar experiências de viagem únicas e memoráveis, com grupos fechados e acompanhamento espiritual
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
-                <Award className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-heading text-2xl font-semibold text-foreground">
-                Experiência Comprovada
-              </h3>
-              <p className="font-paragraph text-gray-600">
-                Mais de 20 anos no mercado, com milhares de clientes satisfeitos e destinos únicos.
-              </p>
-            </div>
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto bg-[#ffac00ff]">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-heading text-2xl font-semibold text-foreground">
-                Grupos Fechados
-              </h3>
-              <p className="font-paragraph text-gray-600">
-                Viagens exclusivas em grupos fechados para uma experiência mais íntima e personalizada.
-              </p>
-            </div>
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
-                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="12" y1="2" x2="12" y2="22" />
-                  <line x1="5" y1="9" x2="19" y2="9" />
-                </svg>
-              </div>
-              <h3 className="font-heading text-2xl font-semibold text-foreground">
-                Diretor Espiritual
-              </h3>
-              <p className="font-paragraph text-gray-600">
-                Acompanhamento de diretor espiritual especializado para enriquecer sua jornada de fé.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Featured Packages Section */}
       <section id="pacotes" className="w-full py-20">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="text-center mb-16">
@@ -344,6 +292,58 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section className="w-full bg-secondary p-0 py-20 px-0">
+        <div className="max-w-[120rem] mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Por que escolher a Alliance?
+            </h2>
+            <p className="font-paragraph text-xl text-gray-600 max-w-3xl mx-auto">
+              Somos especialistas em criar experiências de viagem únicas e memoráveis, com grupos fechados e acompanhamento espiritual
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-heading text-2xl font-semibold text-foreground">
+                Experiência Comprovada
+              </h3>
+              <p className="font-paragraph text-gray-600">
+                Mais de 20 anos no mercado, com milhares de clientes satisfeitos e destinos únicos.
+              </p>
+            </div>
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto bg-[#ffac00ff]">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-heading text-2xl font-semibold text-foreground">
+                Grupos Fechados
+              </h3>
+              <p className="font-paragraph text-gray-600">
+                Viagens exclusivas em grupos fechados para uma experiência mais íntima e personalizada.
+              </p>
+            </div>
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="12" y1="2" x2="12" y2="22" />
+                  <line x1="5" y1="9" x2="19" y2="9" />
+                </svg>
+              </div>
+              <h3 className="font-heading text-2xl font-semibold text-foreground">
+                Diretor Espiritual
+              </h3>
+              <p className="font-paragraph text-gray-600">
+                Acompanhamento de diretor espiritual especializado para enriquecer sua jornada de fé.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Featured Packages Section */}
       {/* About Section */}
       <section className="w-full py-20 bg-secondary">
         <div className="max-w-[120rem] mx-auto px-6">
