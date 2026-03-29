@@ -96,18 +96,18 @@ export default function HomePage() {
               <Image
                 src="https://static.wixstatic.com/media/e4152c_67816ded5533438aae26972a1ce2a94a~mv2.png"
                 alt="Alliance Viagens & Turismo"
-                className="h-12 w-auto object-contain"
+                className="h-12 w-auto object-contain shadow-[12px_12px_4px_0px_#d9d9d9] border border-solid border-black"
                 width={200}
               />
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#pacotes" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
+              <a href="#pacotes" className="font-paragraph text-base text-foreground hover:text-primary transition-colors font-bold">
                 Pacotes
               </a>
-              <Link to="/about" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
+              <Link to="/about" className="font-paragraph text-base text-foreground hover:text-primary transition-colors font-bold">
                 Sobre
               </Link>
-              <Link to="/contact" className="font-paragraph text-base text-foreground hover:text-primary transition-colors">
+              <Link to="/contact" className="font-paragraph text-base text-foreground hover:text-primary transition-colors font-bold">
                 Contato
               </Link>
               <div className="flex items-center space-x-4 text-sm text-gray-600">
@@ -188,7 +188,7 @@ export default function HomePage() {
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">Destinos</h2>
-            <p className="font-paragraph text-xl text-gray-600 max-w-3xl mx-auto">Descubra nossos pacotes e embarque na viagem dos seus sonhos</p>
+            <p className="font-paragraph text-xl text-gray-600 max-w-3xl mx-auto">Descubra nossos pacotes  e embarque na viagem dos seus sonhos</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -368,7 +368,7 @@ export default function HomePage() {
                   <p className="font-paragraph text-gray-600">Destinos Únicos</p>
                 </div>
                 <div className="text-center">
-                  <div className="font-heading text-3xl font-bold text-primary mb-2">20</div>
+                  <div className="font-heading text-3xl font-bold text-primary mb-2">15+</div>
                   <p className="font-paragraph text-gray-600">Anos de Experiência</p>
                 </div>
               </div>
