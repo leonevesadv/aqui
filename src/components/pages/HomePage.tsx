@@ -184,7 +184,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Why Choose Us Section */}
-      <section id="pacotes" className="w-full py-20">
+      <section id="pacotes" className="w-full py-20 bg-secondary">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -292,7 +292,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="w-full bg-secondary p-0 py-20 px-0">
+      <section className="w-full p-0 py-20 px-0 bg-background">
         <div className="max-w-[120rem] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
